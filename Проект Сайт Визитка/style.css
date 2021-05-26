@@ -1,0 +1,106 @@
+ @font-face {
+    font-family: 'MPLUSRounded1c-Bold' ;
+    src: url('../fonts/MPLUSRounded1c-Bold.ttf');
+} 
+
+@font-face {
+    font-family: 'PlayfairDisplaySC-Bold';
+    src: url('../fonts/PlayfairDisplaySC-Bold.ttf');
+}
+
+.heading {
+    font-size: 18px;
+    font-family: 'PlayfairDisplaySC-Bold', Arial, Helvetica, serif; ;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(to top, rgb(168, 59, 165), rgb(233, 204, 233));
+    border-bottom: 2px solid rgb(240, 233, 238);
+    border-top: 2px solid rgb(240, 233, 238);
+    margin: 0 auto 20px;
+    color:rgb(56, 3, 45);
+}
+
+.heading.big {
+    font-size: 26px;
+}
+ 
+body {
+    font-family: 'MPLUSRounded1c-Bold', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+body,.navigation {
+    background: linear-gradient(to bottom, rgb(168, 59, 165), rgb(233, 204, 233));
+}
+
+.navigation {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navigation .link{
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.navigation .link:hover {
+    border: 2px solid rgb(231, 141, 231);
+    color:rgb(56, 3, 45);
+}
+
+.Its-me {
+    display: flex;
+}
+
+.who_I_am {
+    max-width: 900px;
+    font-size: 30px;
+    text-align: justify;
+    padding: 50px 0px;
+}
+
+.photo {
+    text-align: center;
+    overflow: hidden;
+}
+
+.photo .my_face {
+    transition: 1s; 
+}
+
+.my_face:hover {
+    transform: scale(1.2);
+}
+
+.link {
+    text-decoration: none;
+    color:rgb(252, 252, 252);
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-item {
+    color:black;
+    display: flex;
+}
+
+.contacts-item .link {
+    color: inherit;
+}
+
+.contacts-item img {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+}
+
+
+
+
+
+
