@@ -2,8 +2,6 @@ body {
     font-family:'Nunito Sans', Arial, Helvetica, sans-serif;
     margin: 0;
     color: white;
-    font-style: normal;
-    font-weight: normal;
     font-size: 11px;
     line-height: 15px;
     text-transform: uppercase;
@@ -27,8 +25,6 @@ body * {
     justify-content: space-between;
     height: 83px;
     align-items: center;
-    margin-left: 92px;
-    margin-right: 90px;
 }
 
 .logo {
@@ -45,24 +41,26 @@ body * {
     text-transform:inherit;
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     font-style: italic; 
-    font-weight: normal;
     font-size: 11px;
     line-height: 15px;
     text-align: center;
     cursor: pointer;
 }
 
+.hero .button {
+    width: 207px;
+    height: 51px;
+}
 
 .firt-button {
     padding: 19px 42px 20px 41px;
-    
 }
 .second-button {
     padding: 19px 23px 20px 22px;
-    margin-left: 20px;
+    margin-left: 19px;
 }
 
-.second-button:hover {
+.button:hover {
     background: rgba(0, 0, 0, 0);
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
@@ -72,7 +70,6 @@ body * {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0;
 }
 
 .header-navigation__item:not(:last-child) {
@@ -100,9 +97,8 @@ body * {
 
 .hero {
     background-image: url('../images/background.png');
-    padding: 194px 630px 208px 134px;
+    padding: 194px 628px 208px 134px;
     position: relative;
-    background-size: 100% 100%;
 }
 
 .hero-overlay {
@@ -118,18 +114,19 @@ body * {
 .hero-wrapper {
     position: relative;
     z-index: 1;
+    height: 305px;
+    width: 676px;
+    margin: 0;
 }
 
 .title {
     margin: 0;
     font-family: 'Yeseva One','Times New Roman', Times, serif;
-    font-weight: normal;
-    font-style: normal;
     font-size: 40px;
     line-height: 53px;
     width: 676px;
     height: 105px;
-
+    font-weight: normal;
 }
 
 .city {
@@ -140,8 +137,10 @@ body * {
     width: 504px;
     height: 89px;
     font-size: 22px;
+    font-weight: normal;
     line-height: 36px;
     text-transform: none;
-    margin: 19px 0 41px;
+    margin-top: 19px;
+    margin-bottom: 41px;
 }
 
