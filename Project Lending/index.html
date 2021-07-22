@@ -3,48 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet"  href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Yeseva+One&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <div class=" wrapper header-content">
-            <div class="logo">
-                IC "Repair Design Project" 
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    IC "Repair Design Project" 
+                </div>
+                <nav>
+                    <ul class="header-navigation">
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">Home</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#project">Projects</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#measurement">Measurement</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#team">Team</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#reviews">Reviews</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#contacts">Contacts</a></li>
+                    </ul> 
+                </nav>
+                <div class="contacts">
+                    <div class="contacts-phone"><a href="tel:+79287683239" class="header-navigation__link">+7 (928) 768-32-39</a></div>
+                    <div class="contacts-button">
+                        <button class="requestCall">Request a call</button>
+                    </div>
+                    </div>
             </div>
-            <nav>
-               <ul class="header-navigation">
-                   <li class="header-navigation__item"><a class="header-navigation__link" href="#">Home</a></li>
-                   <li class="header-navigation__item"><a class="header-navigation__link" href="#">Projects</a></li>
-                   <li class="header-navigation__item"><a class="header-navigation__link" href="#">Measurement</a></li>
-                   <li class="header-navigation__item"><a class="header-navigation__link" href="#">Team</a></li>
-                   <li class="header-navigation__item"><a class="header-navigation__link" href="#">Reviews</a></li>
-                   <li class="header-navigation__item"><a class="header-navigation__link" href="#">Contacts</a></li>
-               </ul> 
-            </nav>
-            <div class="phone"><a href="tel:+79287683239">+7 (928) 768-32-39</a></div>
-            <button class=" header button">Request a call</button>
-        </div>
-    </header> 
-    <main>
-        <section class="hero">
-            <div class="wrapper hero-wrapper">
-                <h1 class="title">
-                    Turnkey Repair in the <br>
-                    city of <span class="city">Rostov-on-Don</span>
-                </h1>
-                <p class="paragraph">
-                    Get ready-made turnkey repairs on time <br> 
-                    with work time saving up to 45 days and 20% from <br>
-                    cost of materials due to the organization of work
-                </p>
-                <button class="button firt-button">CALCULATE THE COST</button>
-                <button class="button second-button">SUBMIT YOUR APPLICATION</button>
+            <div class="header-block">
+                <div class="container">
+                    <h1 class="title">
+                        Turnkey Repair in the <br>
+                        city of <span class="city">Rostov-on-Don</span>
+                    </h1>
+                    <p class="paragraph text-1">
+                        Get ready-made turnkey repairs on time <br> 
+                        with work time saving up to 45 days and 20% from <br>
+                        cost of materials due to the organization of work
+                    </p>
+                    <p class="paragraph text-2 ">
+                        Get ready-made turnkey repairs on time <br> 
+                        with work time saving up to 45 days and <br>
+                        20% from cost of materials due to the organization of <br> 
+                        work
+                    </p>
+                    <button class="calculate">CALCULATE THE COST</button>
+                    <button class="submit">SUBMIT YOUR APPLICATION</button>
+                </div>
+            <div class="container-overlay"></div>
             </div>
-            <div class="hero-overlay"></div>
-        </section>
-    </main>
+        </header> 
+        <main class="main">
+            <section class="projects" id="projects">
+                <div class="container">
+                    <div class="projects-block__left">
+                            <h2 class="title comlpleted-projects">
+                                Completed <br> 
+                                projects
+                            </h2>
+                            <p class="paragraph">
+                                Only a small part of the work performed by our company is presented <br>
+                                on the site. For 14 years on in the construction <br>
+                                market we have made happy more than 1000 families
+                            </p>
+                            <div class="projects-block__left--features">
+                                <div class="feature">
+                                    <h3 class="title feature_title">City:</h3>
+                                    <p class="paragraph">
+                                        Rostov-on-Don <br>
+                                        LCD admiral
+                                    </p>
+                                </div>
+                                <div class="feature">
+                                    <h3 class="title feature_title">Apartment area:</h3>
+                                    <p class="paragraph">
+                                        81 m<sup>2</sup>
+                                    </p>
+                                </div>
+                                <div class="feature">
+                                    <h3 class="title feature_title">Repair time:</h3>
+                                    <p class="paragraph">
+                                        3.5 months
+                                    </p>
+                                </div>
+                                <div class="feature">
+                                    <h3 class="title feature_title ">Repair Cost:</h3>
+                                    <p class="paragraph">
+                                        Upon request
+                                    </p>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="projects-block__right">
+                        <ul class="projects-list">
+                            <li class="projects-list__item"><a class="projects-list__link">Rostov-on-Don, Admiral</a></li>
+                            <li class="projects-list__item"><a class="projects-list__link">Sochi Thieves</a></li>
+                            <li class="projects-list__item"><a class="projects-list__link">Rostov-on-Don Patriotic</a></li>
+                        </ul>
+                        <div class="projects-chairs">
+                            <img src="../Project Lending/images/chairs.png" alt="Chairs are front of the window">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="control"></section>
+            <section class="repair"></section>
+
+        </main>
+    </div>    
 </body>
 </html> 
