@@ -1,10 +1,10 @@
+/* Общие стили */
 body {
     font-family:'Nunito Sans', Arial, Helvetica, sans-serif;
     color: white;
-    margin: 0;
-    font-size: 11px;
-    text-transform: uppercase;
     background-color: white;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 .wrapper {
@@ -18,85 +18,88 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1300px;
-    padding: 0px 30px;
+.header .container,
+.footer .container{
+    max-width: 1320px;
 }
 
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    height: 83px;
-    align-items: center;
+.container {
+    margin: 0 auto;
+    max-width: 1236px;
+    padding: 0 32px;
 }
 
 @media screen and (max-width:767px) {
-    .container {
+    .container,
+    .header .container,
+    .footer .container {
         max-width: none;
-    }
-
-    .header .container  {
-        height: 57px;
+        padding: 0 18px;
     }
 }
 
-.header {
-    background-color:#131313;
-    background-size: cover;
-}
-
-.logo {
+.header-navigation__item:hover,
+.logo, 
+.contacts-phone .header-navigation__link,
+.city,
+.title,
+.header-navigation__item.active {
     color: #E3B873;
 }
 
+.header, 
+.projects {
+    background-color: #131313;
+}
 
 button {
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
     border: 1px solid transparent; 
-    color:inherit;
     text-transform:inherit;
-    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+    font-family: inherit;
     font-style: italic; 
-    font-size: 11px;
-    text-align: center;
+    font-size: 1em;
+    line-height: 1.36;
     cursor: pointer;
+    width: 13.95vw;
+    height: 7.9vh;
+    padding: 0;
 }
 
-
-button:hover {
+button:not(.form-button):hover,
+button.active {
     background: rgba(0, 0, 0, 0);
     border: 1px solid #FFFFFF;
 }
 
-.calculate {
-    padding: 19px 42px 21px 41px;
-    margin-right: 19px;
+.title, .projects-list{
+    font-family: 'Yeseva One','Times New Roman', Times, serif;
 }
 
-.submit {
-    padding: 19px 23px 20px 22px;
+.title {
+    font-weight: normal;
 }
 
-.requestCall {
-    padding: 13px 33px;
+.subtitle {
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: center;
+    color: #181818;
 }
 
-@media screen and (max-width:767px) {
-    .calculate {
-        margin-bottom: 26px;
-        margin-top: 30px;
-    }
+.paragraph {
+    text-transform: none;
+}
 
-    .requestCall {
-        display: none;
-    }
+button,
+a {
+    color:inherit;
+}
 
-    .calculate, .submit {
-        width: 100%;
-    }
+a {
+    text-decoration: none;
 }
 
 .header-navigation, .projects-list {
@@ -105,24 +108,76 @@ button:hover {
     padding: 0;
 }
 
+.turnkeyRepair {
+    color: white;
+}
+
+/* header */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 5.77vmax;
+    align-items: center;
+    font-size: 0.55em;
+    line-height: 1.36;
+}
+
+@media screen and (max-width:767px) {
+    .header .container {
+        height: 9vmax;
+    }
+}
+
+.header-block button {
+    width: 14.5vw;
+}
+
+.calculate {
+    margin-right: 1.64em;
+}
+
+.requestCall {
+    padding: 0;
+    width: 11.25vw;
+    height: 6.27vh;
+}
+
+.application {
+    display: none;
+}
+
+/* Медиазапросы для кнопок в header */
+@media screen and (max-width:767px) {
+    .submit {
+        display: none;
+    }
+    
+    .calculate {
+        margin-top: 3.5em;
+        margin-right: 0;
+}
+    .application{
+        margin-top: 2.37em;
+        display: block;
+    }
+
+    .requestCall {
+        display: none;
+    }
+
+    .header-block button,
+    .form-button {
+        width: 100%;
+    }
+}
+
 .header-navigation__item:not(:last-child) {
-    margin-right: 47px;
+    margin-right: 4.28em;
 }
-
-.header-navigation__item:hover{
-    color: #E3B873;
-}
-
-.header-navigation__link {
-    text-decoration: none;
-    color:inherit;
-}
-
 
 .contacts-phone .header-navigation__link {
-    color: #E3B873;
     text-decoration: underline;
-    margin-right: 45px;
+    margin-right: 4.1em;
 }
 
 @media screen and (max-width:767px) {
@@ -155,7 +210,25 @@ button:hover {
     }
 }
 
- .container-overlay {
+.header-block .container {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding-left: 5.82em;
+    padding-top: 17.64em;
+    padding-bottom: 47em;
+}
+
+@media screen and (max-width:767px) {
+    .header-block .container{
+        padding-top: 7.73em;
+        padding-bottom: 35em;
+        padding-left: 1.65em;
+    }
+}
+
+/* Затемнение фоновой картинки */
+.container-overlay {
     content: "";
     position:absolute;
     top: 0;
@@ -164,59 +237,35 @@ button:hover {
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
 }
- 
-.header-block .container {
-    position: relative;
-    z-index: 1;
-    display: block;
-    padding-top: 194px;
-    padding-bottom: 513px;
+
+.turnkeyRepair{
+    font-size: 3.64em;
+    line-height: 1.325;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-@media screen and (max-width:767px) {
-    .header-block .container{
-        padding-top: 85px;
-    }
-}
-
-.title, .projects-list{
-    margin: 0;
-    font-family: 'Yeseva One','Times New Roman', Times, serif;
-    font-size: 40px;
-    line-height: 53px;
-    font-weight: normal;
-}
-
-.city {
-    color: #E3B873;
-}
-
-.paragraph {
-    font-size: 22px;
-    font-weight: normal;
-    line-height: 36px;
-    text-transform: none;
-    margin-top: 19px;
-    margin-bottom: 41px;
+h1 ~ .paragraph {
+    font-size: 2em;
+    line-height: 1.636;
+    margin-top: 0.9em;
+    margin-bottom: 1.2em;
 } 
 
 .text-2 {
     display: none;
 }
 
-.text-1 {
-    display: block;
-}
-
 @media screen and (max-width:767px) {
-    .paragraph {
-        font-size: 14px;
+    h1 ~ .paragraph {
+        font-size: 1.27em;
         line-height: 135.84%;
     }
 
     .title {
-        font-size: 23px;
+        font-size: 2.1em;
         line-height: 132.83%;
+        margin-top: 0;
     }
 
     .text-1 {
@@ -228,73 +277,432 @@ button:hover {
     }
 }
 
-.projects{
-    background-color: #131313;
-}
-
+/* Блок Сompleted Projects */
 .projects .container {
     display: flex;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+    padding-top: 5.35em;
+    padding-bottom: 20.5em;
+}
+
+.projects-block__mobile {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .projects-block__left, .projects-block__right {
+        display: none;
+    }
+    
+    .projects-block__mobile {
+        display: block;
+        padding-bottom: 7em;
+    }
+
+    .projects .container {
+        padding-top: 1.8em;
+        padding-left: 0.9em;
+        padding-right: 0.9em;
+        padding-bottom: 44.2em;
+    }
 }
 
 .projects-block__left {
-    margin-top: 176px;
+    padding-top:  3.45em;
 }
 
 .projects-block__right {
-    margin-top: 107px;
-    margin-left: 50px;
+    margin-left: 2.5em;
 }
 
 .projects-list {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 0.7em;
+    line-height: 1.357;
     color: rgba(255, 255, 255, 0.3);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .projects-list__item {
-    margin-right: 60px;
+    margin-right: 4.32em;
 }
 
-.projects-list__link {
-    white-space: nowrap;
-}
-
-.projects-list__link:hover {
-    color:#E3B873;
+.projects-list__link:hover,
+.projects-list__item.active {
+    color: #E3B873;
     border-bottom: 1px solid #E3B873;
-    padding-bottom: 6.7px;
+    padding-bottom: 0.5em;
 }
 
 .projects-chairs {
-    margin-top: 45px;
-}
-
-.projects-block__left .title {
-    color: #E3B873;
+    margin-top: 2.25em;
 }
 
 .comlpleted-projects {
-    font-size: 27px;
-    line-height: 37px;
+    font-size: 1.35em;
+    line-height: 1.37;
     letter-spacing: -0.07em;
-}
-
-.feature_title {
-    font-size: 18px;
-    line-height: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .comlpleted-projects ~ .paragraph{
-    font-size: 14px;
-    line-height: 27px;
+    font-size: 0.7em;
+    line-height: 1.93;
+    margin-top: 2.43em;
+}
+
+@media screen and (max-width:767px) {
+    .comlpleted-projects {
+        font-size: 1.1em;
+        line-height: 138.6%;
+        letter-spacing: -0.07em;
+        text-align: center;
+    }
+
+    .comlpleted-projects ~ .paragraph {
+        font-size: 0.55em;
+        line-height: 158.48%;
+        text-align: center;
+    }
+
+    .projects-room {
+        margin-top: 3em;
+        margin-bottom: 7em;
+    }
+
+    .sliderNavigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -7.5em;
+        margin-right: 0.65em;
+        margin-left: 0.65em;
+    }
+}
+
+.feature_title {
+    font-size: 0.9em;
+    line-height: 1.39;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:767px) {
+    .feature_title {
+        font-size: 0.7em;
+        line-height: 138.6%;
+    }
 }
 
 .feature_title ~ .paragraph {
-    font-size: 13px;
-    line-height: 21px;
+    font-size: 0.65em;
+    line-height: 1.62;
 } 
 
 .projects-block__left--features{
     display: grid;
     grid-template-columns: auto auto;
+    grid-row-gap: 34px;
+    margin-top: 2.1em;
+}
+
+@media screen and (max-width:767px) {
+    .feature_title ~ .paragraph{
+        font-size: 0.55em;
+        line-height: 135.84%;
+    }
+
+    .projects-block__left--features {
+        grid-row-gap: 27px;
+    }
+}
+
+/* Слайдер в Completed projects */
+.carousel {
+    display: flex;
+    margin-top: 4em;
+}
+
+.carousel div {
+    display: flex;
+}
+
+.dots-links {
+    margin: 0 29.5px;
+}
+
+.carousel_link-dots:not(:last-child) {
+    margin-right: 17.5px;
+}
+
+/* Блок Online Control */
+.control .container {
+    margin-top: -17.75em;
+}
+
+@media screen and (max-width:767px) {
+    .control .container{
+        margin-top: -48em;
+    }
+
+    .subtitle{
+        font-size: 1.1em;
+        line-height: 132.83%;
+    }
+}
+
+.control-camera {
+    display: flex;
+    justify-content: center;
+}
+
+.camera-icon {
+    position: relative;
+}
+
+.camera-icon::before {
+    content: "";
+    background: #E3B873;
+    width: 32px;
+    height: 1.5px;
+    border-radius: 30px;
+    position: absolute;
+    right: 43px;
+    top: 12px;
+}
+
+.camera-icon::after {
+    content: "";
+    background: #E3B873;
+    width: 32px;
+    height: 1.5px;
+    border-radius: 30px;
+    position: absolute;
+    left: 43px;
+    top: 12px;
+}
+
+.control .subtitle {
+    color: #FFFFFF;
+}
+
+.control-video {
+    background-image: url("../images/control.png");
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 56.74vw;
+    height: 21.7em;
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+}
+
+@media screen and (max-width:767px) {
+    .control-video{
+        background-image: url("../images/controlmobile.png");
+        width: 91vw;
+        height: 31vh;
+        margin-bottom: 1.5em;
+    }   
+}
+
+
+.control-video_button {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 7.5em;
+}
+
+.control-video_play:nth-of-type(2) {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .control-video_play:nth-of-type(1) {
+        display: none;
+    }
+
+    .control-video_play:nth-of-type(2) {
+        display: block;
+    }
+
+    .control-video_button {
+        padding-top: 3em;
+    }
+}
+
+
+.control-overlay{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.control .paragraph {
+    color: #363636;
+    text-align: center;
+    margin-top: 1.7em;
+    margin-bottom: 5em;
+    font-size: 0.9em;
+    line-height: 2.06;
+}
+
+@media screen and (max-width:767px) {
+    .control .paragraph {
+        font-size: 0.55em;
+        line-height: 169.8%;
+        color: #FFFFFF;
+    }
+}
+
+
+.element {
+    content: "";
+    background: #E3B873;
+    border-radius: 30px;
+    width: 55px;
+    height: 1.54px;
+    margin: auto;
+}
+
+/* Поле ввода */
+.form {
+    margin-left: 10em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:767px) {
+    .form {
+        flex-wrap: nowrap;
+        margin-left: 0;
+        flex-direction: column;
+    }
+}
+
+.form-button {
+    font-size: 0.65em;
+    line-height: 2.076;
+    font-style: normal;
+}
+
+input[type=text],
+input[type=tel] {
+    border: none;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    font-size: 0.7em;
+    line-height: 1.64;
+    width: 16.3vw;
+}
+
+@media screen and (max-width:767px) {
+    input[type=text],
+    input[type=tel] {
+        border-bottom: 1px solid white;
+        width: 100%;
+        line-height: 138.72%;
+        background-color: transparent;
+        color:white
+    }
+}
+
+
+.form-checkbox {
+    color: #181818;
+    text-transform: none;
+    font-size: 0.7em;
+    line-height: 163.68%;
+    margin-left: 240px;
+    margin-top: 37px;
+}
+
+.form-checkbox.mobile {
+    display: none;
+}
+
+.label:not(.label-checkbox){
+    font-size: 0.65em;
+    line-height: 1.6;
+    color: rgba(54, 54, 54, 0.5);
+    text-transform: none;
+}
+
+@media screen and (max-width:767px) {
+    .label:not(.label-checkbox){
+        color:rgba(255, 255, 255, 0.5);
+    }
+
+    .form-checkbox {
+        display: none;
+    }
+
+    .form-checkbox.mobile {
+        display: block;
+        color: white;
+        margin-left: 0;
+        margin-top: 26px;
+        margin-bottom: 62px;
+    }
+}
+
+.label-checkbox {
+    cursor: pointer;
+}
+
+.checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 1px;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.checkbox:checked+label::before {
+    border-color: #E3B873;
+    background-color: #E3B873;
+    background-image: url("../images/checkbox.svg")
+}
+
+.checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: black;
+    background-color: #e9ecef;
+}
+
+.form-userphone {
+    margin-right: 2.45em;
+    margin-left: 2.9em;
+} 
+
+
+@media screen and (max-width:767px) {
+    .form-userphone {
+        margin: 0;
+        margin-top: 63px;
+    }
 }

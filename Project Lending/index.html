@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet"  href="css/styles.css">
+    <title>HOME</title>
+    <link rel="stylesheet"  href="css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Yeseva+One&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
     <div class="wrapper">
@@ -17,7 +20,7 @@
                 </div>
                 <nav>
                     <ul class="header-navigation">
-                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">Home</a></li>
+                        <li class="header-navigation__item active"><a class="header-navigation__link" href="#">Home</a></li>
                         <li class="header-navigation__item"><a class="header-navigation__link" href="#project">Projects</a></li>
                         <li class="header-navigation__item"><a class="header-navigation__link" href="#measurement">Measurement</a></li>
                         <li class="header-navigation__item"><a class="header-navigation__link" href="#team">Team</a></li>
@@ -26,15 +29,15 @@
                     </ul> 
                 </nav>
                 <div class="contacts">
-                    <div class="contacts-phone"><a href="tel:+79287683239" class="header-navigation__link">+7 (928) 768-32-39</a></div>
-                    <div class="contacts-button">
-                        <button class="requestCall">Request a call</button>
+                    <div class="contacts-phone">
+                        <a href="tel:+79287683239" class="header-navigation__link">+7 (928) 768-32-39</a>
                     </div>
-                    </div>
+                    <button class="requestCall">Request a call</button>
+                </div>
             </div>
             <div class="header-block">
                 <div class="container">
-                    <h1 class="title">
+                    <h1 class="title turnkeyRepair">
                         Turnkey Repair in the <br>
                         city of <span class="city">Rostov-on-Don</span>
                     </h1>
@@ -50,9 +53,10 @@
                         work
                     </p>
                     <button class="calculate">CALCULATE THE COST</button>
-                    <button class="submit">SUBMIT YOUR APPLICATION</button>
+                    <button class="submit active">SUBMIT YOUR APPLICATION</button>
+                    <button class="application active">APPLICATION</button>
                 </div>
-            <div class="container-overlay"></div>
+                <div class="container-overlay"></div>
             </div>
         </header> 
         <main class="main">
@@ -95,22 +99,138 @@
                                     </p>
                                 </div>
                             </div>
-                        
+                            <div class="carousel">
+                                <div class="lastSlide">
+                                    <a href="#" class="carousel_link-last"><img src="../Project Lending/images/GroupL.svg" alt="Go to last slide"> </a>
+                                </div>
+                                <div class="dots-links">
+                                    <a href="#" class="carousel_link-dots"><img src="../Project Lending/images/Rectangle 7.4.svg" alt="picture change point"></a>
+                                    <a href="#" class="carousel_link-dots"><img src="../Project Lending/images/Rectangle 7.3.svg" alt="picture change point"></a>
+                                    <a href="#" class="carousel_link-dots"><img src="../Project Lending/images/Rectangle 7.3.svg" alt="picture change point"></a>
+                                </div>
+                                <div class="nextSlide">
+                                    <a href="#" class="carousel_link-next"><img src="../Project Lending/images/GroupR.svg" alt=" Go to the next slide"></a>
+                                </div>
+                            </div>
                     </div>
                     <div class="projects-block__right">
                         <ul class="projects-list">
-                            <li class="projects-list__item"><a class="projects-list__link">Rostov-on-Don, Admiral</a></li>
-                            <li class="projects-list__item"><a class="projects-list__link">Sochi Thieves</a></li>
-                            <li class="projects-list__item"><a class="projects-list__link">Rostov-on-Don Patriotic</a></li>
+                            <li class="projects-list__item active"><a class="projects-list__link" href="#">Rostov-on-Don, Admiral</a></li>
+                            <li class="projects-list__item"><a class="projects-list__link" href="#">Sochi Thieves</a></li>
+                            <li class="projects-list__item"><a class="projects-list__link" href="#">Rostov-on-Don Patriotic</a></li>
                         </ul>
                         <div class="projects-chairs">
                             <img src="../Project Lending/images/chairs.png" alt="Chairs are front of the window">
                         </div>
                     </div>
+                    <div class="projects-block__mobile">
+                        <h2 class="title comlpleted-projects">
+                            Completed <br> 
+                            projects
+                        </h2>
+                        <p class="paragraph">
+                            Only a small part of the work performed by our company is <br>
+                            presented on the site. For 14 years on in the construction <br>
+                            market we have made happy more than 1000 families
+                        </p>
+                        <div class="projects-room">
+                            <div class="projects-room_picture">
+                                <img src="../Project Lending/images/roomMobile.png" alt="Room with table, chairs and TV">
+                            </div>
+                            <div class="sliderNavigation">
+                                <div class="sliderNavigation-last">
+                                    <a href="#" class="sliderNavigation-last_link"><img src="../Project Lending/images/last.svg" alt="Go to last slide"></a>
+                                </div>
+                                <div class="sliderNavigation-next">
+                                    <a href="#" class="sliderNavigation-next_link"><img src="../Project Lending/images/next.svg" alt="Go to next slide"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-block__left--features">
+                            <div class="feature">
+                                <h3 class="title feature_title">City:</h3>
+                                <p class="paragraph">
+                                    Rostov-on-Don <br>
+                                    LCD admiral
+                                </p>
+                            </div>
+                            <div class="feature">
+                                <h3 class="title feature_title">Apartment area:</h3>
+                                <p class="paragraph">
+                                    81 m<sup>2</sup>
+                                </p>
+                            </div>
+                            <div class="feature">
+                                <h3 class="title feature_title">Repair time:</h3>
+                                <p class="paragraph">
+                                    3.5 months
+                                </p>
+                            </div>
+                            <div class="feature">
+                                <h3 class="title feature_title ">Repair Cost:</h3>
+                                <p class="paragraph">
+                                    Upon request
+                                </p>
+                            </div>
+                    </div>
                 </div>
             </section>
-            <section class="control"></section>
-            <section class="repair"></section>
+            <section class="control">
+                <div class="container">
+                    <h2 class="title subtitle">online control</h3>
+                    <div class="control-camera">
+                        <div class="camera-icon">
+                            <img src="../Project Lending/images/icon/camera.svg" alt="icon of camera">
+                        </div>
+                    </div>
+                    <div class="control-video">
+                        <div class="control-video_button">
+                            <a href="#" class="control-video_play"><img src="../Project Lending/images/play.svg" alt="button to play the video"></a>
+                            <a href="#" class="control-video_play"><img src="../Project Lending/images/playmobile.svg" alt="button to play the video"></a>
+                        </div>
+                        <div class="control-overlay"></div>
+                    </div>
+                    <div class="element"></div>
+                    <p class="paragraph control-paragraph text-1">
+                        At each facility, a camera is installed that broadcasts the progress of work on the <br>
+                        clock. At any time, you can go to our website and monitor the progress of work in <br>
+                        your apartment. You can watch the live broadcast from one of our facilities! <br>
+                        Leave a request below and you will receive a link to the broadcast.
+                    </p>
+                    <p class="paragraph control-paragraph text-2">
+                        At each facility, a camera is installed that broadcasts the progress of work on the
+                        clock. At any time, you can go to our website and monitor the progress of work in 
+                        your apartment. <br>
+                        You can watch the live broadcast from one of our facilities! <br>
+                        Leave a request below and you will receive a link to the broadcast.
+                    </p>
+                    <form class="form" action="#" method="GET" enctype="multipart/form-data" >
+                            <div class="form-username">
+                                <label class="label" for="username">Name</label> <br>
+                                <input type="text" class="input" tabindex="1" name="username" value="What is your name:" id="username">
+                            </div>
+                            <div class="form-userphone">
+                                <label class="label" for="userphone">Phone</label> <br>
+                                <input type="tel" class="input" tabindex="2" name="userphone" value="Your phone number:" id="userphone">
+                            </div>
+                            <div class="form-checkbox mobile">
+                                <input checked class="checkbox" type="checkbox" name="agreement" value="yes" tabindex="3" id="checkbox">
+                                <label class="label-checkbox" for="checkbox">I agree to the processing of personal data</label>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" tabindex="4" class="form-button">Submit</button>
+                            </div>
+                            <div class="form-checkbox">
+                                    <input checked class="checkbox" type="checkbox" name="agreement" value="yes" tabindex="3" id="checkbox">
+                                    <label class="label-checkbox" for="checkbox">I agree to the processing of personal data</label>
+                            </div>
+                    </form>
+                </div>
+            </section>
+            <section class="repair">
+                <div class="container">
+                </div>
+            </section>
 
         </main>
     </div>    
