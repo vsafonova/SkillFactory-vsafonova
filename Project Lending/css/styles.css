@@ -64,8 +64,7 @@ button {
     line-height: 1.36;
     cursor: pointer;
     width: 13.95vw;
-    height: 7.9vh;
-    padding: 0;
+    height: 7.7vh;
 }
 
 button:not(.form-button):hover,
@@ -100,6 +99,7 @@ a {
 
 a {
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .header-navigation, .projects-list {
@@ -124,22 +124,21 @@ a {
 
 @media screen and (max-width:767px) {
     .header .container {
-        height: 9vmax;
+        height: 8.55vh;
     }
 }
 
 .header-block button {
-    width: 14.5vw;
+    width: 14.4vw;
 }
 
 .calculate {
-    margin-right: 1.64em;
+    margin-right: 1.8em;
 }
 
 .requestCall {
-    padding: 0;
-    width: 11.25vw;
-    height: 6.27vh;
+    width: 11.2vw;
+    height: 5.6vh;
 }
 
 .application {
@@ -153,8 +152,7 @@ a {
     }
     
     .calculate {
-        margin-top: 3.5em;
-        margin-right: 0;
+        margin-top: 3.3em;
 }
     .application{
         margin-top: 2.37em;
@@ -214,7 +212,7 @@ a {
     position: relative;
     z-index: 1;
     display: block;
-    padding-left: 5.82em;
+    padding-left: 6.73em;
     padding-top: 17.64em;
     padding-bottom: 47em;
 }
@@ -241,15 +239,14 @@ a {
 .turnkeyRepair{
     font-size: 3.64em;
     line-height: 1.325;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 h1 ~ .paragraph {
     font-size: 2em;
-    line-height: 1.636;
-    margin-top: 0.9em;
-    margin-bottom: 1.2em;
+    line-height: 1.64;
+    margin-top: 0.85em;
+    margin-bottom: 1.1em;
 } 
 
 .text-2 {
@@ -260,12 +257,12 @@ h1 ~ .paragraph {
     h1 ~ .paragraph {
         font-size: 1.27em;
         line-height: 135.84%;
+        margin-top: 1.15em;
     }
 
     .title {
         font-size: 2.1em;
         line-height: 132.83%;
-        margin-top: 0;
     }
 
     .text-1 {
@@ -281,7 +278,6 @@ h1 ~ .paragraph {
 .projects .container {
     display: flex;
     padding-left: 1.6em;
-    padding-right: 1.6em;
     padding-top: 5.35em;
     padding-bottom: 20.5em;
 }
@@ -321,7 +317,6 @@ h1 ~ .paragraph {
     line-height: 1.357;
     color: rgba(255, 255, 255, 0.3);
     margin-top: 0;
-    margin-bottom: 0;
 }
 
 .projects-list__item {
@@ -344,7 +339,6 @@ h1 ~ .paragraph {
     line-height: 1.37;
     letter-spacing: -0.07em;
     margin-top: 0;
-    margin-bottom: 0;
 }
 
 .comlpleted-projects ~ .paragraph{
@@ -357,14 +351,15 @@ h1 ~ .paragraph {
     .comlpleted-projects {
         font-size: 1.1em;
         line-height: 138.6%;
-        letter-spacing: -0.07em;
         text-align: center;
     }
 
     .comlpleted-projects ~ .paragraph {
         font-size: 0.55em;
-        line-height: 158.48%;
+        /* line-height: 158.48%; */
         text-align: center;
+        margin-top: 2em;
+        margin-bottom: 0;
     }
 
     .projects-room {
@@ -398,6 +393,8 @@ h1 ~ .paragraph {
 .feature_title ~ .paragraph {
     font-size: 0.65em;
     line-height: 1.62;
+    margin-bottom: 0;
+    margin-top: 0.7em;
 } 
 
 .projects-block__left--features{
@@ -411,6 +408,7 @@ h1 ~ .paragraph {
     .feature_title ~ .paragraph{
         font-size: 0.55em;
         line-height: 135.84%;
+        margin-top: 1em;
     }
 
     .projects-block__left--features {
@@ -421,7 +419,7 @@ h1 ~ .paragraph {
 /* Слайдер в Completed projects */
 .carousel {
     display: flex;
-    margin-top: 4em;
+    margin-top: 3.8em;
 }
 
 .carousel div {
@@ -448,7 +446,7 @@ h1 ~ .paragraph {
 
     .subtitle{
         font-size: 1.1em;
-        line-height: 132.83%;
+        line-height: 138.6%;
     }
 }
 
@@ -496,7 +494,7 @@ h1 ~ .paragraph {
     height: 21.7em;
     margin: auto;
     margin-top: 1.5em;
-    margin-bottom: 3em;
+    margin-bottom: 3.1em;
 }
 
 @media screen and (max-width:767px) {
@@ -504,10 +502,10 @@ h1 ~ .paragraph {
         background-image: url("../images/controlmobile.png");
         width: 91vw;
         height: 31vh;
-        margin-bottom: 1.5em;
-    }   
-}
-
+        margin-bottom: 1.4em;
+        margin-top: 2em;
+        }
+}   
 
 .control-video_button {
     position: relative;
@@ -546,7 +544,6 @@ h1 ~ .paragraph {
 }
 
 .control .paragraph {
-    color: #363636;
     text-align: center;
     margin-top: 1.7em;
     margin-bottom: 5em;
@@ -554,11 +551,18 @@ h1 ~ .paragraph {
     line-height: 2.06;
 }
 
+.control .paragraph,
+input {
+    color: #363636;
+}
+
 @media screen and (max-width:767px) {
     .control .paragraph {
         font-size: 0.55em;
         line-height: 169.8%;
         color: #FFFFFF;
+        margin-top: 2em;
+        margin-bottom: 6em;
     }
 }
 
@@ -574,14 +578,13 @@ h1 ~ .paragraph {
 
 /* Поле ввода */
 .form {
-    margin-left: 10em;
+    margin-left: 10.1em;
     display: flex;
     flex-wrap: wrap;
 }
 
 @media screen and (max-width:767px) {
     .form {
-        flex-wrap: nowrap;
         margin-left: 0;
         flex-direction: column;
     }
@@ -599,7 +602,8 @@ input[type=tel] {
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     font-size: 0.7em;
     line-height: 1.64;
-    width: 16.3vw;
+    width: 16.05vw;
+    font-family: inherit;
 }
 
 @media screen and (max-width:767px) {
@@ -619,15 +623,11 @@ input[type=tel] {
     text-transform: none;
     font-size: 0.7em;
     line-height: 163.68%;
-    margin-left: 240px;
-    margin-top: 37px;
+    margin-left: 17em;
+    margin-top: 2.65em;
 }
 
-.form-checkbox.mobile {
-    display: none;
-}
-
-.label:not(.label-checkbox){
+.label{
     font-size: 0.65em;
     line-height: 1.6;
     color: rgba(54, 54, 54, 0.5);
@@ -640,15 +640,14 @@ input[type=tel] {
     }
 
     .form-checkbox {
-        display: none;
+        color:#FFFFFF;
+        margin-left: 0;
+        margin-top: 1.9em;
+        margin-bottom: 4.5em;
     }
 
-    .form-checkbox.mobile {
-        display: block;
-        color: white;
-        margin-left: 0;
-        margin-top: 26px;
-        margin-bottom: 62px;
+    .form-submit {
+        order: 1;
     }
 }
 
@@ -656,19 +655,19 @@ input[type=tel] {
     cursor: pointer;
 }
 
-.checkbox{
+.custom-checkbox{
     position: absolute;
     z-index: -1;
     opacity: 0;
 }
 
-.checkbox+label {
+.custom-checkbox+label {
     display: inline-flex;
     align-items: center;
     user-select: none;
 }
 
-.checkbox+label::before {
+.custom-checkbox+label::before {
     content: '';
     display: inline-block;
     width: 18px;
@@ -683,7 +682,7 @@ input[type=tel] {
     background-size: 50% 50%;
 }
 
-.checkbox:checked+label::before {
+.custom-checkbox:checked+label::before {
     border-color: #E3B873;
     background-color: #E3B873;
     background-image: url("../images/checkbox.svg")
@@ -703,6 +702,6 @@ input[type=tel] {
 @media screen and (max-width:767px) {
     .form-userphone {
         margin: 0;
-        margin-top: 63px;
+        margin-top: 3.1em;
     }
 }
