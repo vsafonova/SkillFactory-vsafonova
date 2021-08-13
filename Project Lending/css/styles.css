@@ -1,10 +1,10 @@
 /* Общие стили */
 body {
     font-family:'Nunito Sans', Arial, Helvetica, sans-serif;
-    color: white;
+    color: #363636;
     background-color: white;
     margin: 0;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .wrapper {
@@ -40,9 +40,7 @@ body {
 
 .header-navigation__item:hover,
 .logo, 
-.contacts-phone .header-navigation__link,
 .city,
-.title,
 .header-navigation__item.active {
     color: #E3B873;
 }
@@ -57,7 +55,6 @@ button {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
     border: 1px solid transparent; 
-    text-transform:inherit;
     font-family: inherit;
     font-style: italic; 
     font-size: 1em;
@@ -73,6 +70,13 @@ button.active {
     border: 1px solid #FFFFFF;
 }
 
+.title,
+.projects-list,
+button,
+.header .container {
+    text-transform: uppercase;
+}
+
 .title, .projects-list{
     font-family: 'Yeseva One','Times New Roman', Times, serif;
 }
@@ -85,11 +89,7 @@ button.active {
     font-size: 1em;
     line-height: 1.4;
     text-align: center;
-    color: #181818;
-}
-
-.paragraph {
-    text-transform: none;
+    color:#181818;
 }
 
 button,
@@ -108,7 +108,8 @@ a {
     padding: 0;
 }
 
-.turnkeyRepair {
+header,
+.projects {
     color: white;
 }
 
@@ -176,6 +177,7 @@ a {
 .contacts-phone .header-navigation__link {
     text-decoration: underline;
     margin-right: 4.1em;
+    color:  #E3B873;
 }
 
 @media screen and (max-width:767px) {
@@ -247,6 +249,7 @@ h1 ~ .paragraph {
     line-height: 1.64;
     margin-top: 0.85em;
     margin-bottom: 1.1em;
+    text-transform: none;
 } 
 
 .text-2 {
@@ -339,6 +342,7 @@ h1 ~ .paragraph {
     line-height: 1.37;
     letter-spacing: -0.07em;
     margin-top: 0;
+    color: #E3B873;
 }
 
 .comlpleted-projects ~ .paragraph{
@@ -381,6 +385,7 @@ h1 ~ .paragraph {
     line-height: 1.39;
     margin-top: 0;
     margin-bottom: 0;
+    color: #E3B873;
 }
 
 @media screen and (max-width:767px) {
@@ -551,11 +556,6 @@ h1 ~ .paragraph {
     line-height: 2.06;
 }
 
-.control .paragraph,
-input {
-    color: #363636;
-}
-
 @media screen and (max-width:767px) {
     .control .paragraph {
         font-size: 0.55em;
@@ -594,6 +594,7 @@ input {
     font-size: 0.65em;
     line-height: 2.076;
     font-style: normal;
+    color: white;
 }
 
 input[type=text],
@@ -604,6 +605,7 @@ input[type=tel] {
     line-height: 1.64;
     width: 16.05vw;
     font-family: inherit;
+    color: #363636;
 }
 
 @media screen and (max-width:767px) {
@@ -620,7 +622,6 @@ input[type=tel] {
 
 .form-checkbox {
     color: #181818;
-    text-transform: none;
     font-size: 0.7em;
     line-height: 163.68%;
     margin-left: 17em;
@@ -631,7 +632,6 @@ input[type=tel] {
     font-size: 0.65em;
     line-height: 1.6;
     color: rgba(54, 54, 54, 0.5);
-    text-transform: none;
 }
 
 @media screen and (max-width:767px) {
@@ -704,4 +704,23 @@ input[type=tel] {
         margin: 0;
         margin-top: 3.1em;
     }
+}
+
+/* Блок repair */
+
+.repair-icon {
+    text-align: center;
+}
+
+.repair-wrapper {
+    display: flex;
+}
+
+.wrapper-designers {
+    display: flex;
+    flex-direction: column;
+}
+
+.repair-text {
+    background-color: white;
 }
