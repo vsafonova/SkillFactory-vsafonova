@@ -52,7 +52,7 @@ body {
 
 button {
     background: #E3B873;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    box-shadow:  0px 5px 15px rgba(227, 184, 115, 0.3);
     border-radius: 2px;
     border: 1px solid transparent; 
     font-family: inherit;
@@ -68,21 +68,30 @@ button:not(.form-button):hover,
 button.active {
     background: rgba(0, 0, 0, 0);
     border: 1px solid #FFFFFF;
+    box-shadow: none;
 }
 
 .title,
 .projects-list,
 button,
-.header .container {
+.header .container,
+.repair-price {
     text-transform: uppercase;
 }
 
-.title, .projects-list{
+.title,
+.projects-lis,
+.repair-price {
     font-family: 'Yeseva One','Times New Roman', Times, serif;
 }
 
 .title {
     font-weight: normal;
+}
+
+h3 {
+    font-size: 0.9em;
+    line-height: 1.39;
 }
 
 .subtitle {
@@ -296,14 +305,13 @@ h1 ~ .paragraph {
     
     .projects-block__mobile {
         display: block;
-        padding-bottom: 7em;
     }
 
     .projects .container {
         padding-top: 1.8em;
         padding-left: 0.9em;
         padding-right: 0.9em;
-        padding-bottom: 44.2em;
+        padding-bottom: 45.5em;
     }
 }
 
@@ -336,6 +344,11 @@ h1 ~ .paragraph {
 .projects-chairs {
     margin-top: 2.25em;
 }
+
+.projects-chairs img {
+    filter: drop-shadow(0px 50px 30px rgba(0, 0, 0, 0.15));
+}
+
 
 .comlpleted-projects {
     font-size: 1.35em;
@@ -381,8 +394,6 @@ h1 ~ .paragraph {
 }
 
 .feature_title {
-    font-size: 0.9em;
-    line-height: 1.39;
     margin-top: 0;
     margin-bottom: 0;
     color: #E3B873;
@@ -446,7 +457,7 @@ h1 ~ .paragraph {
 
 @media screen and (max-width:767px) {
     .control .container{
-        margin-top: -48em;
+        margin-top: -43.5em;
     }
 
     .subtitle{
@@ -500,6 +511,7 @@ h1 ~ .paragraph {
     margin: auto;
     margin-top: 1.5em;
     margin-bottom: 3.1em;
+    filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.15));
 }
 
 @media screen and (max-width:767px) {
@@ -595,6 +607,7 @@ h1 ~ .paragraph {
     line-height: 2.076;
     font-style: normal;
     color: white;
+    box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
 }
 
 input[type=text],
@@ -708,12 +721,34 @@ input[type=tel] {
 
 /* Блок repair */
 
+.repair .container {
+    padding: 0;
+}
+
+
 .repair-icon {
     text-align: center;
+    margin-bottom: 1.55em;
+}
+
+@media screen and (max-width:767px) {
+    .repair-icon {
+        margin-bottom: 2em;
+    }
+
+    .repair .container {
+        padding: 0 18px;
+    }
 }
 
 .repair-wrapper {
     display: flex;
+}
+
+@media screen and (max-width:767px) {
+    .repair-wrapper {
+        flex-direction: column;
+    }
 }
 
 .wrapper-designers {
@@ -723,4 +758,109 @@ input[type=tel] {
 
 .repair-text {
     background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    margin-left: 1.5em;
+    padding-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: -6.65em;
+    width: 22.92vw;
+    height: 42.85vh;
 }
+
+@media screen and (max-width:767px) {
+    .repair-text {
+        margin-right: 70px;
+        margin-left: 0;
+    }
+}
+
+.repair .subtitle {
+    margin-top: 7.4em;
+    margin-bottom: 0.65em;
+}
+
+@media screen and (max-width:767px) {
+    .repair .subtitle {
+        margin-top: 2.65em;
+        margin-bottom: 0.78em;
+    }
+}
+
+.overhaul {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+}
+
+@media screen and (max-width:767px) {
+    .overhaul {
+        margin: 0;
+    }
+}
+
+.repair .title {
+    text-transform: none;
+}
+
+.repair .repair-list {
+    font-size: 0.65em;
+    line-height: 2.076;
+    color:#959595;
+    padding-left: 1.08em;
+} 
+
+@media screen and (max-width:767px) {
+    .repair .repair-list {
+        font-size: 13px;
+        line-height: 169.8%;
+    }
+}
+
+.repair-price {
+    font-size: 0.9em;
+    line-height: 1.39;
+    width: 15.84vw;
+    height: 8.1vh;
+    color: #FFFFFF;
+    background: #E3B873;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+    margin-left: 1.7em;
+    padding-top: 17px;
+    padding-bottom: 17px; 
+    margin-top: -26px;
+}
+
+.redecorating .repair-price {
+    padding-left: 21.5px;
+    padding-right: 21.5px;
+}
+
+.overhaul .repair-price {
+    padding-left: 18.5px;
+    padding-right: 18.5px;
+}
+
+.designer-repair .repair-price {
+    padding-left: 16.5px;
+    padding-right: 16.5px;
+}
+
+.repair-picture img:last-of-type {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .repair-picture img:last-of-type {
+        display: block;
+    }
+
+    .repair-picture img:first-of-type {
+        display: none;
+    }
+
+    .repair-text .title,
+    .repair-price {
+        font-size: 0.75em;
+        line-height: 138.6%;
+    }
+}
+
