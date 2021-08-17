@@ -101,6 +101,13 @@ h3 {
     color:#181818;
 }
 
+@media screen and (max-width:767px) {
+    .subtitle{
+        font-size: 1.1em;
+        line-height: 138.6%;
+    }
+}
+
 button,
 a {
     color:inherit;
@@ -272,7 +279,7 @@ h1 ~ .paragraph {
         margin-top: 1.15em;
     }
 
-    .title {
+    .turnkeyRepair{
         font-size: 2.1em;
         line-height: 132.83%;
     }
@@ -364,13 +371,6 @@ h1 ~ .paragraph {
     margin-top: 2.43em;
 }
 
-@media screen and (max-width:767px) {
-    .comlpleted-projects {
-        font-size: 1.1em;
-        line-height: 138.6%;
-        text-align: center;
-    }
-
     .comlpleted-projects ~ .paragraph {
         font-size: 0.55em;
         /* line-height: 158.48%; */
@@ -391,7 +391,7 @@ h1 ~ .paragraph {
         margin-right: 0.65em;
         margin-left: 0.65em;
     }
-}
+
 
 .feature_title {
     margin-top: 0;
@@ -458,11 +458,6 @@ h1 ~ .paragraph {
 @media screen and (max-width:767px) {
     .control .container{
         margin-top: -43.5em;
-    }
-
-    .subtitle{
-        font-size: 1.1em;
-        line-height: 138.6%;
     }
 }
 
@@ -761,7 +756,6 @@ input[type=tel] {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     margin-left: 1.5em;
     padding-left: 1.5em;
-    margin-right: 1.5em;
     margin-top: -6.65em;
     width: 22.92vw;
     height: 42.85vh;
@@ -769,8 +763,10 @@ input[type=tel] {
 
 @media screen and (max-width:767px) {
     .repair-text {
-        margin-right: 70px;
         margin-left: 0;
+        width: 72vw;
+        height: 36.1vh;
+        margin-top: -7.1em;
     }
 }
 
@@ -797,7 +793,7 @@ input[type=tel] {
     }
 }
 
-.repair .title {
+.repair-text .title {
     text-transform: none;
 }
 
@@ -810,7 +806,7 @@ input[type=tel] {
 
 @media screen and (max-width:767px) {
     .repair .repair-list {
-        font-size: 13px;
+        font-size: 0.65em;
         line-height: 169.8%;
     }
 }
@@ -824,28 +820,46 @@ input[type=tel] {
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
     margin-left: 1.7em;
-    padding-top: 17px;
-    padding-bottom: 17px; 
-    margin-top: -26px;
+    padding-top: 0.95em;
+    padding-bottom: 0.95em;
+    margin-top: -1.5em;
+    margin-bottom: 3em;
+}
+
+@media screen and (max-width:767px) {
+    .repair-price {
+        padding-top: 0.77em;
+        padding-bottom: 0.77em;
+        margin-top: -1.35em;
+        margin-bottom: 4em;
+        width: 50.7vw;
+        height: 6vh;
+        margin-left: 0;
+    }
 }
 
 .redecorating .repair-price {
-    padding-left: 21.5px;
-    padding-right: 21.5px;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
 }
 
 .overhaul .repair-price {
-    padding-left: 18.5px;
-    padding-right: 18.5px;
+    padding-left: 1.03em;
+    padding-right: 1.03em;
 }
 
 .designer-repair .repair-price {
-    padding-left: 16.5px;
-    padding-right: 16.5px;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
 }
 
 .repair-picture img:last-of-type {
     display: none;
+}
+
+.repair-text .title {
+    margin-top: 1.15em;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width:767px) {
@@ -861,6 +875,11 @@ input[type=tel] {
     .repair-price {
         font-size: 0.75em;
         line-height: 138.6%;
+    }
+
+    .repair-text .title {
+        margin-top: 1.4em;
+        margin-bottom: 0.6em;
     }
 }
 
