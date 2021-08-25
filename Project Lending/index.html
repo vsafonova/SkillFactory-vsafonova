@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="container navigation">
                 <div class="logo">
                     IC "Repair Design Project" 
                 </div>
@@ -63,7 +63,7 @@
             <section class="projects" id="projects">
                 <div class="container">
                     <div class="projects-block__left">
-                            <h2 class="title comlpleted-projects">
+                            <h2 class="title completed-projects">
                                 Completed <br> 
                                 projects
                             </h2>
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                     <div class="projects-block__mobile">
-                        <h2 class="title subtitle comlpleted-projects">
+                        <h2 class="title subtitle completed-projects">
                             Completed <br> 
                             projects
                         </h2>
@@ -184,10 +184,8 @@
                         </div>
                     </div>
                     <div class="control-video">
-                        <div class="control-video_button">
-                            <a href="#" class="control-video_play"><img src="../Project Lending/images/play.svg" alt="button to play the video"></a>
-                            <a href="#" class="control-video_play"><img src="../Project Lending/images/playmobile.svg" alt="button to play the video"></a>
-                        </div>
+                        <img src="../Project Lending/images/play.svg" alt="button to play the video">
+                        <img src="../Project Lending/images/playmobile.svg" alt="button to play the video">
                         <div class="control-overlay"></div>
                     </div>
                     <div class="element"></div>
@@ -287,6 +285,36 @@
                             </div>
                             <div class="repair-price">from 4000 rub / m2</div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="measurement" id="measurement">
+                <div class="container">
+                    <div class="measurement-block-left"></div>
+                        <form action="#" class="form" method="GET" enctype="multipart/form-data">
+                            <p class="paragraph">
+                                Leave a request for free<br>
+                                departure of the measurer
+                            </p>
+                            <div class="form-username">
+                                <label class="label" for="username">Name</label> <br>
+                                <input type="text" class="input" tabindex="1" name="username" value="What is your name:" id="username">
+                            </div>
+                            <div class="form-userphone">
+                                <label class="label" for="userphone">Phone</label> <br>
+                                <input type="tel" class="input" tabindex="2" name="userphone" value="Your phone number:" id="userphone">
+                            </div>
+                            <div class="form-useremail">
+                                <label class="label" for="useremail">Email</label> <br>
+                                <input type="email" class="input" tabindex="3" name="useremail" value="Your email" id="useremail">
+                            <div class="form-checkbox">
+                                    <input checked class="custom-checkbox" type="checkbox" name="agreement" value="yes" tabindex="4" id="agreement">
+                                    <label class="label-checkbox" for="agreement">I agree to the processing of personal data</label>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" tabindex="5" class="form-button">Call the measurer</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

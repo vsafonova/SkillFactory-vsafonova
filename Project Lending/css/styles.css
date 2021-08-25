@@ -5,6 +5,9 @@ body {
     background-color: white;
     margin: 0;
     text-transform: none;
+    font-size: 1em;
+    line-height: 1.35;
+    font-weight: normal;
 }
 
 .wrapper {
@@ -57,11 +60,11 @@ button {
     border: 1px solid transparent; 
     font-family: inherit;
     font-style: italic; 
-    font-size: 1em;
-    line-height: 1.36;
+    font-size: 0.55em;
+    line-height: inherit;
     cursor: pointer;
-    width: 13.95vw;
-    height: 7.7vh;
+    width: 200px;
+    height: 51px;
 }
 
 button:not(.form-button):hover,
@@ -74,19 +77,20 @@ button.active {
 .title,
 .projects-list,
 button,
-.header .container,
+.container.navigation,
 .repair-price {
     text-transform: uppercase;
 }
 
 .title,
-.projects-lis,
+.projects-list,
 .repair-price {
     font-family: 'Yeseva One','Times New Roman', Times, serif;
 }
 
-.title {
-    font-weight: normal;
+.title,.paragraph {
+    font-weight: inherit;
+    margin: 0;
 }
 
 h3 {
@@ -95,7 +99,7 @@ h3 {
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: inherit;
     line-height: 1.4;
     text-align: center;
     color:#181818;
@@ -130,32 +134,33 @@ header,
 }
 
 /* header */
-.header .container {
+.container.navigation {
     display: flex;
     justify-content: space-between;
-    height: 5.77vmax;
+    height: 83px;
     align-items: center;
     font-size: 0.55em;
-    line-height: 1.36;
 }
 
 @media screen and (max-width:767px) {
     .header .container {
-        height: 8.55vh;
+        height: 57px;
     }
 }
 
 .header-block button {
-    width: 14.4vw;
+    width: 207px;
 }
 
 .calculate {
-    margin-right: 1.8em;
+    margin-right: 1.3em;
 }
 
 .requestCall {
-    width: 11.2vw;
-    height: 5.6vh;
+    width: 161px;
+    height: 37px;
+    font-size: 1em;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
 }
 
 .application {
@@ -168,9 +173,6 @@ header,
         display: none;
     }
     
-    .calculate {
-        margin-top: 3.3em;
-}
     .application{
         margin-top: 2.37em;
         display: block;
@@ -217,7 +219,6 @@ header,
     background-image: url('../images/background.png') ;
     position: relative;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 @media screen and (max-width:767px) {
@@ -229,17 +230,16 @@ header,
 .header-block .container {
     position: relative;
     z-index: 1;
-    display: block;
-    padding-left: 6.73em;
-    padding-top: 17.64em;
-    padding-bottom: 47em;
+    padding-top: 9.7em;
+    padding-bottom: 10.4em;
+    padding-left: 3.7em;
 }
 
 @media screen and (max-width:767px) {
     .header-block .container{
-        padding-top: 7.73em;
-        padding-bottom: 35em;
-        padding-left: 1.65em;
+        padding-top: 4.25em;
+        padding-bottom: 19em;
+        padding-left: 0.9em;
     }
 }
 
@@ -254,18 +254,11 @@ header,
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.turnkeyRepair{
-    font-size: 3.64em;
-    line-height: 1.325;
-    margin: 0;
-}
-
 h1 ~ .paragraph {
-    font-size: 2em;
+    font-size: 1.1em;
     line-height: 1.64;
-    margin-top: 0.85em;
-    margin-bottom: 1.1em;
-    text-transform: none;
+    padding-top: 0.65em;
+    padding-bottom: 1.1em;
 } 
 
 .text-2 {
@@ -274,14 +267,14 @@ h1 ~ .paragraph {
 
 @media screen and (max-width:767px) {
     h1 ~ .paragraph {
-        font-size: 1.27em;
+        font-size: 0.7em;
         line-height: 135.84%;
-        margin-top: 1.15em;
+        padding-top: 1.15em;
+        padding-bottom: 3.7em;
     }
 
-    .turnkeyRepair{
-        font-size: 2.1em;
-        line-height: 132.83%;
+    h1 {
+        font-size: 1.15em;
     }
 
     .text-1 {
@@ -298,7 +291,7 @@ h1 ~ .paragraph {
     display: flex;
     padding-left: 1.6em;
     padding-top: 5.35em;
-    padding-bottom: 20.5em;
+    padding-bottom: 20.8em;
 }
 
 .projects-block__mobile {
@@ -318,7 +311,7 @@ h1 ~ .paragraph {
         padding-top: 1.8em;
         padding-left: 0.9em;
         padding-right: 0.9em;
-        padding-bottom: 45.5em;
+        padding-bottom: 44.2em;
     }
 }
 
@@ -332,9 +325,8 @@ h1 ~ .paragraph {
 
 .projects-list {
     font-size: 0.7em;
-    line-height: 1.357;
     color: rgba(255, 255, 255, 0.3);
-    margin-top: 0;
+    margin: 0;
 }
 
 .projects-list__item {
@@ -357,27 +349,33 @@ h1 ~ .paragraph {
 }
 
 
-.comlpleted-projects {
+.completed-projects {
     font-size: 1.35em;
     line-height: 1.37;
     letter-spacing: -0.07em;
-    margin-top: 0;
     color: #E3B873;
 }
 
-.comlpleted-projects ~ .paragraph{
+.completed-projects ~ .paragraph{
     font-size: 0.7em;
     line-height: 1.93;
-    margin-top: 2.43em;
+    margin-top: 2.5em;
+    margin-bottom: 3em;
 }
 
-    .comlpleted-projects ~ .paragraph {
+@media screen and (max-width:767px) {
+    .completed-projects ~ .paragraph {
         font-size: 0.55em;
-        /* line-height: 158.48%; */
+        line-height: 158.48%;
         text-align: center;
         margin-top: 2em;
-        margin-bottom: 0;
     }
+
+    .completed-projects {
+        font-size: 1.1em;
+        line-height: 138.6%;
+    }
+}
 
     .projects-room {
         margin-top: 3em;
@@ -409,7 +407,6 @@ h1 ~ .paragraph {
 .feature_title ~ .paragraph {
     font-size: 0.65em;
     line-height: 1.62;
-    margin-bottom: 0;
     margin-top: 0.7em;
 } 
 
@@ -417,7 +414,6 @@ h1 ~ .paragraph {
     display: grid;
     grid-template-columns: auto auto;
     grid-row-gap: 34px;
-    margin-top: 2.1em;
 }
 
 @media screen and (max-width:767px) {
@@ -435,7 +431,7 @@ h1 ~ .paragraph {
 /* Слайдер в Completed projects */
 .carousel {
     display: flex;
-    margin-top: 3.8em;
+    margin-top: 4em;
 }
 
 .carousel div {
@@ -452,18 +448,19 @@ h1 ~ .paragraph {
 
 /* Блок Online Control */
 .control .container {
-    margin-top: -17.75em;
+    margin-top: -17em;
 }
 
 @media screen and (max-width:767px) {
     .control .container{
-        margin-top: -43.5em;
+        margin-top: -41.3em;
     }
 }
 
 .control-camera {
     display: flex;
     justify-content: center;
+    margin-top: 1em;
 }
 
 .camera-icon {
@@ -501,8 +498,8 @@ h1 ~ .paragraph {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 56.74vw;
-    height: 21.7em;
+    width: 817px;
+    height: 434px;
     margin: auto;
     margin-top: 1.5em;
     margin-bottom: 3.1em;
@@ -512,35 +509,37 @@ h1 ~ .paragraph {
 @media screen and (max-width:767px) {
     .control-video{
         background-image: url("../images/controlmobile.png");
-        width: 91vw;
-        height: 31vh;
+        width: 340px;
+        height: 207px;
         margin-bottom: 1.4em;
         margin-top: 2em;
+        box-shadow: 0px 20px 30px rgba(24, 24, 24, 0.1)
         }
 }   
 
-.control-video_button {
+.control-video img {
     position: relative;
     z-index: 1;
-    text-align: center;
-    padding-top: 7.5em;
 }
 
-.control-video_play:nth-of-type(2) {
+.control-video img:first-child {
+    left: 41%;
+    top: 34%;
+}
+
+.control-video img:nth-child(2) {
     display: none;
 }
 
 @media screen and (max-width:767px) {
-    .control-video_play:nth-of-type(1) {
+    .control-video img:first-child {
         display: none;
     }
 
-    .control-video_play:nth-of-type(2) {
+    .control-video img:nth-child(2) {
         display: block;
-    }
-
-    .control-video_button {
-        padding-top: 3em;
+        left: 36%;
+        top: 29%;
     }
 }
 
@@ -557,8 +556,8 @@ h1 ~ .paragraph {
 
 .control .paragraph {
     text-align: center;
-    margin-top: 1.7em;
-    margin-bottom: 5em;
+    margin-top: 1.9em;
+    margin-bottom: 5.2em;
     font-size: 0.9em;
     line-height: 2.06;
 }
@@ -569,7 +568,7 @@ h1 ~ .paragraph {
         line-height: 169.8%;
         color: #FFFFFF;
         margin-top: 2em;
-        margin-bottom: 6em;
+        margin-bottom: 4em;
     }
 }
 
@@ -584,16 +583,19 @@ h1 ~ .paragraph {
 }
 
 /* Поле ввода */
-.form {
+.control .form {
     margin-left: 10.1em;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    width: 769px;
 }
 
 @media screen and (max-width:767px) {
-    .form {
+    .control .form {
         margin-left: 0;
         flex-direction: column;
+        width: 340px;
     }
 }
 
@@ -606,22 +608,24 @@ h1 ~ .paragraph {
 }
 
 input[type=text],
-input[type=tel] {
+input[type=tel],
+input[type=email] {
     border: none;
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     font-size: 0.7em;
     line-height: 1.64;
-    width: 16.05vw;
+    width: 231px;
     font-family: inherit;
     color: #363636;
 }
 
 @media screen and (max-width:767px) {
     input[type=text],
-    input[type=tel] {
+    input[type=tel],
+    input[type=email] {
         border-bottom: 1px solid white;
         width: 100%;
-        line-height: 138.72%;
+        /* line-height: 138.72%; */
         background-color: transparent;
         color:white
     }
@@ -651,7 +655,7 @@ input[type=tel] {
         color:#FFFFFF;
         margin-left: 0;
         margin-top: 1.9em;
-        margin-bottom: 4.5em;
+        margin-bottom: 4em;
     }
 
     .form-submit {
@@ -701,12 +705,6 @@ input[type=tel] {
     background-color: #e9ecef;
 }
 
-.form-userphone {
-    margin-right: 2.45em;
-    margin-left: 2.9em;
-} 
-
-
 @media screen and (max-width:767px) {
     .form-userphone {
         margin: 0;
@@ -718,21 +716,25 @@ input[type=tel] {
 
 .repair .container {
     padding: 0;
+    padding-top: 7.4em;
 }
 
 
 .repair-icon {
     text-align: center;
     margin-bottom: 1.55em;
+    margin-top: 0.65em;
 }
 
 @media screen and (max-width:767px) {
     .repair-icon {
         margin-bottom: 2em;
+        margin-top: 0.85em;
     }
 
     .repair .container {
         padding: 0 18px;
+        padding-top: 2.9em;
     }
 }
 
@@ -757,8 +759,8 @@ input[type=tel] {
     margin-left: 1.5em;
     padding-left: 1.5em;
     margin-top: -6.65em;
-    width: 22.92vw;
-    height: 42.85vh;
+    width: 330px;
+    height: 286px;
 }
 
 @media screen and (max-width:767px) {
@@ -767,18 +769,6 @@ input[type=tel] {
         width: 72vw;
         height: 36.1vh;
         margin-top: -7.1em;
-    }
-}
-
-.repair .subtitle {
-    margin-top: 7.4em;
-    margin-bottom: 0.65em;
-}
-
-@media screen and (max-width:767px) {
-    .repair .subtitle {
-        margin-top: 2.65em;
-        margin-bottom: 0.78em;
     }
 }
 
@@ -795,6 +785,7 @@ input[type=tel] {
 
 .repair-text .title {
     text-transform: none;
+    margin-top: 1.4em;
 }
 
 .repair .repair-list {
@@ -814,8 +805,8 @@ input[type=tel] {
 .repair-price {
     font-size: 0.9em;
     line-height: 1.39;
-    width: 15.84vw;
-    height: 8.1vh;
+    width: 228px;
+    height: 54px;
     color: #FFFFFF;
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -823,7 +814,6 @@ input[type=tel] {
     padding-top: 0.95em;
     padding-bottom: 0.95em;
     margin-top: -1.5em;
-    margin-bottom: 3em;
 }
 
 @media screen and (max-width:767px) {
@@ -832,8 +822,8 @@ input[type=tel] {
         padding-bottom: 0.77em;
         margin-top: -1.35em;
         margin-bottom: 4em;
-        width: 50.7vw;
-        height: 6vh;
+        width: 190px;
+        height: 40px;
         margin-left: 0;
     }
 }
@@ -857,11 +847,6 @@ input[type=tel] {
     display: none;
 }
 
-.repair-text .title {
-    margin-top: 1.15em;
-    margin-bottom: 0;
-}
-
 @media screen and (max-width:767px) {
     .repair-picture img:last-of-type {
         display: block;
@@ -883,3 +868,65 @@ input[type=tel] {
     }
 }
 
+/* Блок measurement  */
+
+.measurement .container {
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    margin-right: 68px;
+    padding-top: 124px;
+}
+
+.measurement-block-left {
+    background-image: url("../images/background4.png");
+    width: 703px;
+    height: 645px;
+}
+
+.measurement .form {
+    background-color: #131313;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+    width: 506px;
+    margin-left: 131px;
+    margin-top: 106px;
+    padding-left: 49px;
+    padding-right: 49px;
+}
+
+.form .paragraph {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 28px;
+    margin-bottom: 39px;
+}
+
+.measurement .label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.measurement input {
+    color: #FFFFFF;
+    background-color: inherit;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    width: 100%;
+}
+
+.measurement input:last-child {
+    margin-bottom: 48px;
+}
+
+.measurement .form-checkbox {
+    margin: 0;
+    color: white;
+    margin-top: 16px;
+}
+
+.measurement button {
+    width: 213px;
+    margin-top: 39px;
+    margin-left: 195px;
+    margin-bottom: 27px;
+}
