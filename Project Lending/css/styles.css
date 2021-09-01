@@ -1,4 +1,5 @@
-/* Общие стили */
+/* Common styles*/
+
 body {
     font-family:'Nunito Sans', Arial, Helvetica, sans-serif;
     color: #363636;
@@ -22,7 +23,7 @@ body {
 }
 
 .header .container,
-.footer .container{
+.footer .container {
     max-width: 1320px;
 }
 
@@ -52,6 +53,8 @@ body {
 .projects {
     background-color: #131313;
 }
+
+ /* Style of button */
 
 button {
     background: #E3B873;
@@ -84,11 +87,13 @@ button,
 
 .title,
 .projects-list,
-.repair-price {
+.repair-price,
+.circle div {
     font-family: 'Yeseva One','Times New Roman', Times, serif;
 }
 
-.title,.paragraph {
+.title,
+.paragraph {
     font-weight: inherit;
     margin: 0;
 }
@@ -122,7 +127,8 @@ a {
     white-space: nowrap;
 }
 
-.header-navigation, .projects-list {
+.header-navigation,
+.projects-list {
     list-style: none;
     display: flex;
     padding: 0;
@@ -133,7 +139,76 @@ header,
     color: white;
 }
 
-/* header */
+form {
+    display: flex;
+}
+
+input {
+    border: none;
+    font-size: 0.7em;
+    line-height: 1.64;
+}
+
+.checkbox {
+    font-size: 0.7em;
+    line-height: 163.68%;
+}
+
+.label{
+    font-size: 0.65em;
+    line-height: 1.6;
+}
+
+.label-checkbox {
+    cursor: pointer;
+}
+
+.custom-checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 1px;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+    border-color: #E3B873;
+    background-color: #E3B873;
+    background-image: url("../images/checkbox.svg")
+}
+
+.checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: black;
+    background-color: #e9ecef;
+}
+
+.form-button {
+    font-size: 0.65em;
+    font-style: normal;
+    color: white;
+}
+
+/* Block header */
+
 .container.navigation {
     display: flex;
     justify-content: space-between;
@@ -167,7 +242,6 @@ header,
     display: none;
 }
 
-/* Медиазапросы для кнопок в header */
 @media screen and (max-width:767px) {
     .submit {
         display: none;
@@ -183,7 +257,7 @@ header,
     }
 
     .header-block button,
-    .form-button {
+    .form-button{
         width: 100%;
     }
 }
@@ -244,6 +318,7 @@ header,
 }
 
 /* Затемнение фоновой картинки */
+
 .container-overlay {
     content: "";
     position:absolute;
@@ -287,6 +362,7 @@ h1 ~ .paragraph {
 }
 
 /* Блок Сompleted Projects */
+
 .projects .container {
     display: flex;
     padding-left: 1.6em;
@@ -377,19 +453,18 @@ h1 ~ .paragraph {
     }
 }
 
-    .projects-room {
-        margin-top: 3em;
-        margin-bottom: 7em;
-    }
+.projects-room {
+    margin-top: 3em;
+    margin-bottom: 7em;
+}
 
-    .sliderNavigation {
-        display: flex;
-        justify-content: space-between;
-        margin-top: -7.5em;
-        margin-right: 0.65em;
-        margin-left: 0.65em;
-    }
-
+.sliderNavigation {
+    justify-content: space-between;
+    margin-top: -7.5em;
+    margin-right: 0.65em;
+    margin-left: 0.65em;
+    display: flex;
+}
 
 .feature_title {
     margin-top: 0;
@@ -429,6 +504,7 @@ h1 ~ .paragraph {
 }
 
 /* Слайдер в Completed projects */
+
 .carousel {
     display: flex;
     margin-top: 4em;
@@ -447,6 +523,7 @@ h1 ~ .paragraph {
 }
 
 /* Блок Online Control */
+
 .control .container {
     margin-top: -17em;
 }
@@ -543,7 +620,6 @@ h1 ~ .paragraph {
     }
 }
 
-
 .control-overlay{
     content: "";
     position: absolute;
@@ -572,7 +648,6 @@ h1 ~ .paragraph {
     }
 }
 
-
 .element {
     content: "";
     background: #E3B873;
@@ -583,46 +658,36 @@ h1 ~ .paragraph {
 }
 
 /* Поле ввода */
-.control .form {
+
+.control-form {
     margin-left: 10.1em;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 769px;
 }
 
 @media screen and (max-width:767px) {
-    .control .form {
+    .control-form {
         margin-left: 0;
         flex-direction: column;
         width: 340px;
     }
 }
 
-.form-button {
-    font-size: 0.65em;
+.control-form .form-button {
     line-height: 2.076;
-    font-style: normal;
-    color: white;
     box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
 }
 
-input[type=text],
-input[type=tel],
-input[type=email] {
-    border: none;
+.control-form input {
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-    font-size: 0.7em;
-    line-height: 1.64;
     width: 231px;
     font-family: inherit;
     color: #363636;
 }
 
 @media screen and (max-width:767px) {
-    input[type=text],
-    input[type=tel],
-    input[type=email] {
+    .control-form input {
         border-bottom: 1px solid white;
         width: 100%;
         /* line-height: 138.72%; */
@@ -631,18 +696,13 @@ input[type=email] {
     }
 }
 
-
-.form-checkbox {
+.control-form .checkbox {
     color: #181818;
-    font-size: 0.7em;
-    line-height: 163.68%;
     margin-left: 17em;
     margin-top: 2.65em;
 }
 
-.label{
-    font-size: 0.65em;
-    line-height: 1.6;
+.control-form .label{
     color: rgba(54, 54, 54, 0.5);
 }
 
@@ -651,61 +711,17 @@ input[type=email] {
         color:rgba(255, 255, 255, 0.5);
     }
 
-    .form-checkbox {
+    .control-form .checkbox {
         color:#FFFFFF;
         margin-left: 0;
         margin-top: 1.9em;
         margin-bottom: 4em;
     }
 
-    .form-submit {
+    .form-submit{
         order: 1;
     }
-}
 
-.label-checkbox {
-    cursor: pointer;
-}
-
-.custom-checkbox{
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-.custom-checkbox+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-}
-
-.custom-checkbox+label::before {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: 1px solid #adb5bd;
-    border-radius: 1px;
-    margin-right: 0.5em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
-}
-
-.custom-checkbox:checked+label::before {
-    border-color: #E3B873;
-    background-color: #E3B873;
-    background-image: url("../images/checkbox.svg")
-}
-
-.checkbox:not(:disabled):not(:checked)+label:hover::before {
-    border-color: black;
-    background-color: #e9ecef;
-}
-
-@media screen and (max-width:767px) {
     .form-userphone {
         margin: 0;
         margin-top: 3.1em;
@@ -874,8 +890,8 @@ input[type=email] {
     padding-left: 0;
     margin-left: 0;
     display: flex;
-    margin-right: 68px;
-    padding-top: 124px;
+    margin-right: 3.4em;
+    padding-top: 6.2em;
 }
 
 .measurement-block-left {
@@ -884,30 +900,33 @@ input[type=email] {
     height: 645px;
 }
 
-.measurement .form {
+.measurement-form {
+    flex-direction: column;
     background-color: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     width: 506px;
-    margin-left: 131px;
-    margin-top: 106px;
-    padding-left: 49px;
-    padding-right: 49px;
+    margin-left: 6.55em;
+    margin-top: 5.3em;
+    padding-left: 2.45em;
+    padding-right: 2.45em;
 }
 
-.form .paragraph {
-    font-size: 18px;
-    line-height: 26px;
+.measurement-form .paragraph {
+    font-size: 0.9em;
+    line-height: 1.44;
     text-align: center;
     color: #FFFFFF;
-    margin-top: 28px;
-    margin-bottom: 39px;
+    margin-top: 1.55em;
+    margin-bottom: 2.2em;
 }
 
 .measurement .label {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.measurement input {
+.measurement-form input[type=text],
+.measurement-form input[type=tel],
+.measurement-form input[type=email] {
     color: #FFFFFF;
     background-color: inherit;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -915,18 +934,52 @@ input[type=email] {
 }
 
 .measurement input:last-child {
-    margin-bottom: 48px;
+    margin-bottom: 3.45em;
 }
 
-.measurement .form-checkbox {
+.measurement .checkbox {
     margin: 0;
     color: white;
-    margin-top: 16px;
+    margin-top: 1.2em;
 }
 
-.measurement button {
+.measurement .form-button{
     width: 213px;
-    margin-top: 39px;
-    margin-left: 195px;
-    margin-bottom: 27px;
+    margin-top: 3em;
+    margin-left: 15em;
+    line-height: 1.62;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    background: #E3B873;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+    border-radius: 30px;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle div {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.numbers .paragraph {
+    font-size: 14px;
+    line-height: 19px;
 }

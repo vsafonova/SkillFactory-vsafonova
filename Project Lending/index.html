@@ -202,19 +202,19 @@
                         You can watch the live broadcast from one of our facilities! <br>
                         Leave a request below and you will receive a link to the broadcast.
                     </p>
-                    <form class="form" action="#" method="GET" enctype="multipart/form-data" >
-                            <div class="form-username">
+                    <form class="control-form" action="#" method="GET" enctype="multipart/form-data" >
+                            <div class="control-form_username">
                                 <label class="label" for="username">Name</label> <br>
                                 <input type="text" class="input" tabindex="1" name="username" value="What is your name:" id="username">
                             </div>
-                            <div class="form-userphone">
+                            <div class="control-form_userphone">
                                 <label class="label" for="userphone">Phone</label> <br>
                                 <input type="tel" class="input" tabindex="2" name="userphone" value="Your phone number:" id="userphone">
                             </div>
                             <div class="form-submit">
                                 <button type="submit" tabindex="4" class="form-button">Submit</button>
                             </div>
-                            <div class="form-checkbox">
+                            <div class="checkbox">
                                     <input checked class="custom-checkbox" type="checkbox" name="agreement" value="yes" tabindex="3" id="agreement">
                                     <label class="label-checkbox" for="agreement">I agree to the processing of personal data</label>
                             </div>
@@ -290,32 +290,69 @@
             </section>
             <section class="measurement" id="measurement">
                 <div class="container">
-                    <div class="measurement-block-left"></div>
-                        <form action="#" class="form" method="GET" enctype="multipart/form-data">
-                            <p class="paragraph">
-                                Leave a request for free<br>
-                                departure of the measurer
-                            </p>
-                            <div class="form-username">
-                                <label class="label" for="username">Name</label> <br>
-                                <input type="text" class="input" tabindex="1" name="username" value="What is your name:" id="username">
+                    <div class="measurement-block-left">
+                        <div class="numbers">
+                            <div class="number">
+                                <div class="circle">
+                                    <div>01</div>
+                                </div>
+                                <p class="paragraph">
+                                    Our specialist will arrive for measurements per day <br>
+                                    contact, or appoint a date convenient for you
+                                </p>
                             </div>
-                            <div class="form-userphone">
-                                <label class="label" for="userphone">Phone</label> <br>
-                                <input type="tel" class="input" tabindex="2" name="userphone" value="Your phone number:" id="userphone">
+                            <div class="number">
+                                <div class="circle">
+                                    <div>02</div>
+                                </div>
+                                <p class="paragraph">
+                                    Free metering
+                                </p>
                             </div>
-                            <div class="form-useremail">
-                                <label class="label" for="useremail">Email</label> <br>
-                                <input type="email" class="input" tabindex="3" name="useremail" value="Your email" id="useremail">
-                            <div class="form-checkbox">
-                                    <input checked class="custom-checkbox" type="checkbox" name="agreement" value="yes" tabindex="4" id="agreement">
-                                    <label class="label-checkbox" for="agreement">I agree to the processing of personal data</label>
+                            <div class="number">
+                                <div class="circle">
+                                    <div>03</div>
+                                </div>
+                                <p class="paragraph">
+                                    Free consultation
+                                </p>
                             </div>
-                            <div class="form-submit">
-                                <button type="submit" tabindex="5" class="form-button">Call the measurer</button>
+                            <div class="number">
+                                <div class="circle">
+                                    <div>04</div>
+                                </div>
+                                <p class="paragraph">
+                                    Get a cost estimate and <br>
+                                    the timing of your future repairs
+                                </p>
                             </div>
-                        </form>
+                        </div>
                     </div>
+                    <form action="#" class="measurement-form" method="GET" enctype="multipart/form-data">
+                        <p class="paragraph">
+                            Leave a request for free<br>
+                            departure of the measurer
+                        </p>
+                        <div class="measurement-form_username">
+                            <label class="label" for="username">Name</label> <br>
+                            <input type="text" class="input" tabindex="1" name="username" value="What is your name:" id="username">
+                        </div>
+                        <div class="measurement-form_userphone">
+                            <label class="label" for="userphone">Phone</label> <br>
+                            <input type="tel" class="input" tabindex="2" name="userphone" value="Your phone number:" id="userphone">
+                        </div>
+                        <div class="measurement-form_useremail">
+                            <label class="label" for="useremail">Email</label> <br>
+                            <input type="email" class="input" tabindex="3" name="useremail" value="Your email" id="useremail">
+                        </div>
+                        <div class="checkbox">
+                                <input checked class="custom-checkbox" type="checkbox" name="agreement" value="yes" tabindex="4" id="agreement">
+                                <label class="label-checkbox" for="agreement">I agree to the processing of personal data</label>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" tabindex="5" class="form-button">Call the measurer</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
