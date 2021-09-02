@@ -7,7 +7,7 @@ body {
     margin: 0;
     text-transform: none;
     font-size: 1em;
-    line-height: 1.35;
+    line-height: 1.4;
     font-weight: normal;
 }
 
@@ -100,12 +100,10 @@ button,
 
 h3 {
     font-size: 0.9em;
-    line-height: 1.39;
 }
 
 .subtitle {
     font-size: inherit;
-    line-height: 1.4;
     text-align: center;
     color:#181818;
 }
@@ -329,11 +327,15 @@ input {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+h1 {
+    line-height: 1.325;
+}
+
 h1 ~ .paragraph {
     font-size: 1.1em;
     line-height: 1.64;
-    padding-top: 0.65em;
-    padding-bottom: 1.1em;
+    padding-top: 0.7em;
+    padding-bottom: 1.15em;
 } 
 
 .text-2 {
@@ -427,7 +429,6 @@ h1 ~ .paragraph {
 
 .completed-projects {
     font-size: 1.35em;
-    line-height: 1.37;
     letter-spacing: -0.07em;
     color: #E3B873;
 }
@@ -820,7 +821,6 @@ h1 ~ .paragraph {
 
 .repair-price {
     font-size: 0.9em;
-    line-height: 1.39;
     width: 228px;
     height: 54px;
     color: #FFFFFF;
@@ -896,6 +896,7 @@ h1 ~ .paragraph {
 
 .measurement-block-left {
     background-image: url("../images/background4.png");
+    background-size: cover;
     width: 703px;
     height: 645px;
 }
@@ -907,20 +908,20 @@ h1 ~ .paragraph {
     width: 506px;
     margin-left: 6.55em;
     margin-top: 5.3em;
+    padding-top: 1.4em;
     padding-left: 2.45em;
     padding-right: 2.45em;
+    padding-bottom: 1.35em;
 }
 
 .measurement-form .paragraph {
     font-size: 0.9em;
-    line-height: 1.44;
     text-align: center;
     color: #FFFFFF;
-    margin-top: 1.55em;
     margin-bottom: 2.2em;
 }
 
-.measurement .label {
+.measurement-form .label {
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -933,8 +934,9 @@ h1 ~ .paragraph {
     width: 100%;
 }
 
-.measurement input:last-child {
-    margin-bottom: 3.45em;
+.measurement-form .measurement-form_username,
+.measurement-form .measurement-form_userphone {
+    margin-bottom: 2.4em;
 }
 
 .measurement .checkbox {
@@ -943,10 +945,13 @@ h1 ~ .paragraph {
     margin-top: 1.2em;
 }
 
-.measurement .form-button{
+.measurement-form .form-button {
     width: 213px;
-    margin-top: 3em;
-    margin-left: 15em;
+}
+
+.measurement .form-submit{
+    margin-top: 1.95em;
+    margin-left: 9.75em;
     line-height: 1.62;
 }
 
@@ -973,13 +978,11 @@ h1 ~ .paragraph {
 }
 
 .circle div {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 0.9em;
     text-align: center;
     color: #FFFFFF;
 }
 
 .numbers .paragraph {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 0.7em;
 }
