@@ -1,5 +1,4 @@
 /* Common styles*/
-
 body {
     font-family:'Nunito Sans', Arial, Helvetica, sans-serif;
     color: #363636;
@@ -412,7 +411,7 @@ h1 ~ .paragraph {
 }
 
 .projects-list__link:hover,
-.projects-list__item.active {
+.projects-list__link.active {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
     padding-bottom: 0.5em;
@@ -775,7 +774,7 @@ h1 ~ .paragraph {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     margin-left: 1.5em;
     padding-left: 1.5em;
-    margin-top: -6.65em;
+    margin-top: -6.75em;
     width: 330px;
     height: 286px;
 }
@@ -890,15 +889,24 @@ h1 ~ .paragraph {
     padding-left: 0;
     margin-left: 0;
     display: flex;
+    justify-content: space-between;
     margin-right: 3.4em;
     padding-top: 6.2em;
+    padding-bottom: 235px;
+    max-width: 1643px;
 }
 
+@media screen and (max-width:767px) {
+    .measurement {
+        display: none;
+    }
+}
 .measurement-block-left {
     background-image: url("../images/background4.png");
-    background-size: cover;
+    background-repeat: no-repeat;
     width: 703px;
-    height: 645px;
+    padding-top: 117px;
+    padding-left: 240px;
 }
 
 .measurement-form {
@@ -906,12 +914,23 @@ h1 ~ .paragraph {
     background-color: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     width: 506px;
-    margin-left: 6.55em;
+    margin-bottom: 1.9em;
     margin-top: 5.3em;
     padding-top: 1.4em;
     padding-left: 2.45em;
     padding-right: 2.45em;
     padding-bottom: 1.35em;
+}
+
+.pig {
+    display: flex;
+    margin-left: 1em;
+}
+
+.pig .paragraph {
+    font-size: 0.9em;
+    color: #E3B873;
+    padding-top: 1em;
 }
 
 .measurement-form .paragraph {
@@ -958,11 +977,16 @@ h1 ~ .paragraph {
 .numbers {
     display: flex;
     flex-direction: column;
+    height: 473px;
 }
 
 .number {
     display: flex;
     align-items: center;
+}
+
+.number:not(:last-child) {
+    margin-bottom: 83px;
 }
 
 .circle {
@@ -975,6 +999,7 @@ h1 ~ .paragraph {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 5px;
 }
 
 .circle div {
@@ -985,4 +1010,118 @@ h1 ~ .paragraph {
 
 .numbers .paragraph {
     font-size: 0.7em;
+}
+
+/* Block "We realize" */
+
+.realization-background {
+    background: url(../images/realizebkg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 864px;
+}
+
+.realization .container {
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    margin-left: 99px;
+    margin-right: 102px;
+    width: 1239px;
+    display: flex;
+    justify-content: space-between;
+} 
+
+.realization-overlay {
+    height: 864px;
+    min-width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.container-mobile {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .realization-background,
+    .realization-overlay,
+    .realization .container {
+        display: none;
+    }
+
+    .container-mobile {
+        display: block;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .subtitle {
+        color: #E3B873;
+    }
+}
+
+.realization-block_left h2 {
+    font-size: 1.35em;
+    color: #E3B873;
+    text-align: left;
+}
+
+.realization-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.9;
+    color: white;
+    height: 516px;
+    margin-top: 35px;
+}
+
+.realization-list_link:hover,
+.realization-list_link.active {
+    color: #E3B873;
+    border-bottom: 0.66px #E3B873 solid ;
+}
+
+.realization-list_item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.realization-list_item {
+    height: 24px;
+}
+
+.realization-block_left {
+    margin-top: 6.85em;
+}
+
+.realization-block_right {
+    display: flex;
+}
+
+.photo-block_left {
+    margin-right: 43px;
+    margin-top: -41px;
+}
+
+.photo-block_right {
+    margin-top: -112px;
+}
+
+.photo-block_left,
+.photo-block_right {
+    width: 354px;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-block_left img:last-child {
+    margin-top: 39px;
+}
+
+.photo-block_right img:last-child {
+    margin-top: 37px;
 }
