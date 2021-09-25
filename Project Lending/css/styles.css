@@ -1030,7 +1030,7 @@ h1 ~ .paragraph {
     padding: 0;
     margin-left: 99px;
     margin-right: 102px;
-    width: 1239px;
+    max-width: 1239px;
     display: flex;
     justify-content: space-between;
 } 
@@ -1047,21 +1047,46 @@ h1 ~ .paragraph {
     display: none;
 }
 
+.realization-block_right {
+    display: flex;
+}
+
 @media screen and (max-width:767px) {
     .realization-background,
     .realization-overlay,
-    .realization .container {
+    .realization-block_left,
+    .realization-block_right{
         display: none;
+    }
+
+    .realization .container {
+        display: block;
+        position:static;
+        max-width: none;
+        padding: 0 18px;
+        margin: 0 auto;
     }
 
     .container-mobile {
         display: block;
-        padding-left: 18px;
-        padding-right: 18px;
     }
 
     .subtitle {
         color: #E3B873;
+        margin-bottom: 27px;
+    }
+
+    .container-mobile-picture {
+        height: 242px;
+        position: absolute;
+    }
+
+    .container-mobile-scrolling {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 340px;
+        margin-top: 88px;
     }
 }
 
@@ -1098,10 +1123,6 @@ h1 ~ .paragraph {
     margin-top: 6.85em;
 }
 
-.realization-block_right {
-    display: flex;
-}
-
 .photo-block_left {
     margin-right: 43px;
     margin-top: -41px;
@@ -1124,4 +1145,18 @@ h1 ~ .paragraph {
 
 .photo-block_right img:last-child {
     margin-top: 37px;
+}
+
+/* Block with reviews */
+
+.reviews .container {
+    text-align: center;
+}
+
+.container-reviews {
+    display: flex;
+}
+
+.reviews-amount {
+    display: flex;
 }
