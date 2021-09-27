@@ -87,7 +87,8 @@ button,
 .title,
 .projects-list,
 .repair-price,
-.circle div {
+.circle div,
+.reviews-amount .paragraph{
     font-family: 'Yeseva One','Times New Roman', Times, serif;
 }
 
@@ -287,43 +288,54 @@ input {
 }
 
 .header-block {
-    background-image: url('../images/background.png') ;
-    position: relative;
+    height: 707px;
+}
+
+.header-block-background {
+    background: url(..//images/background.png) no-repeat;
+    background-position: center;
     background-size: cover;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 707px;
 }
 
 @media screen and (max-width:767px) {
+    .header-block-background {
+        background: url(..//images/backgroundmobile.png) no-repeat;
+        height: 476px;
+    }
+
     .header-block {
-        background-image: url('../images/backgroundmobile.png') ;
+        height: 476px;
     }
 }
 
 .header-block .container {
     position: relative;
+    z-index: 2;
+    padding-top: 194px;
+    margin-left: 102px;
+}
+
+.container-overlay {
+    position: absolute;
     z-index: 1;
-    padding-top: 9.7em;
-    padding-bottom: 10.4em;
-    padding-left: 3.7em;
+    width: 100%;
+    height: 707px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width:767px) {
     .header-block .container{
-        padding-top: 4.25em;
-        padding-bottom: 19em;
-        padding-left: 0.9em;
+        padding-top: 85px;
+        margin: 0;
     }
-}
 
-/* Затемнение фоновой картинки */
-
-.container-overlay {
-    content: "";
-    position:absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    .container-overlay {
+        height: 476px;
+    }
 }
 
 h1 {
@@ -530,7 +542,7 @@ h1 ~ .paragraph {
 
 @media screen and (max-width:767px) {
     .control .container{
-        margin-top: -41.3em;
+        margin-top: -39em;
     }
 }
 
@@ -1151,12 +1163,115 @@ h1 ~ .paragraph {
 
 .reviews .container {
     text-align: center;
+    margin-top: 69px;
+    padding: 0;
+}
+
+@media screen and (max-width:767px) {
+    .reviews {
+        display: none;
+    }
 }
 
 .container-reviews {
     display: flex;
+    justify-content: space-between;
+}
+
+.reviews-customers {
+    display: flex;
+    flex-direction: column;
+    width: 376px;
+    text-align: left;
+}
+
+.reviews-person {
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    padding-left: 20px;
+    padding-top: 24px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews-svg {
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+.reviews-svg ~ .paragraph {
+    font-size: 0.9em;
+    line-height: 1.61;
+    margin-bottom: 39px;
+}
+
+.customers-photo {
+    border-radius: 40px;
+    margin-right: 23px;
+}
+
+.reviews-person .paragraph {
+    font-size: 0.65em;
+    line-height: 180%;
+    color: #959595;
+    width: 324px;
+}
+
+.reviews-amount .paragraph {
+    font-size: 0.85em;
+    line-height: 1.41;
+    color: white;
+    text-transform: uppercase;
+}
+
+.separate {
+    width: 0.75px;
+    height: 54px;
+    background-color: white;
+}
+
+.reviews-person .paragraph:first-of-type {
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.reviews-customers .title {
+    text-transform: none;
+    line-height: 1.28;
+    color: #181818;
+    align-self: center;
 }
 
 .reviews-amount {
+    width: 294px;
+    height: 54px;
+    background: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    padding-right: 7px;
+    padding-left: 12px;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -27px;
+}
+
+.reviews-amount img {
+    width: 32px;
+    height: 31px;
+}
+
+.reviews-background {
+    display:flex;
+    opacity: 0.05;
+}
+
+.reviews-background div {
+    height: 450px;
+    width: 729px;
+    background-image: url(../images/backgroundReview.png);
+    background-repeat: no-repeat;
+}
+
+.reviews-background div:last-of-type {
+    transform: scale(-1, 1);
 }
