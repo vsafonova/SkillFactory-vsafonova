@@ -519,7 +519,76 @@
                     <div></div>
                 </div>
             </section>
+            <section class="feedback">
+                <div class="container">
+                    <form action="#" class="feedback-form" method="GET" enctype="multipart/form-data">
+                        <p class="paragraph">
+                            have any questions?
+                        </p>
+                        <div class="feedback-form_contacts">
+                            <div class="feedback-form_username">
+                                <label class="label" for="username">Name</label> <br>
+                                <input type="text" class="input" tabindex="1" name="username" value="What is your name:" id="username">
+                            </div>
+                            <div class="feedback-form_userphone">
+                                <label class="label" for="userphone">Phone</label> <br>
+                                <input type="tel" class="input" tabindex="2" name="userphone" value="Your phone number:" id="userphone">
+                            </div>
+                        </div>
+                        <div class="feedback-form_userquestion">
+                            <label class="label" for="userquestion">Question</label> <br>
+                            <input type="text" class="input" tabindex="3" name="userquestion" value="I want to know:" id="userquestion">
+                        </div>
+                        <div class="checkbox">
+                                <input checked class="custom-checkbox" type="checkbox" name="agreement" value="yes" tabindex="4" id="agreement">
+                                <label class="label-checkbox" for="agreement">I agree to the processing of personal data</label>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" tabindex="5" class="form-button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="address" id="contacts">
+                <div class="address-background-1"></div>
+                <div class="address-background-2"></div>
+                <div class="address-overlay"></div>
+                <div class="container">
+                    <p class="paragraph">
+                        Rostov-on-Don, Nansen St., 239 Shopping Center <br>
+                        Decorum Tel +7 (928) 768 32 29
+                    </p>
+                    <div class="networks">
+                        <a><img src="./images/mail.svg"></a>
+                        <a><img src=".//images/instagram.svg"></a>
+                    </div>
+                    <img src=".//images/map.png" alt="location">
+                </div>
+            </section>
         </main>
+        <footer class="footer">
+            <div class="container navigation">
+                <div class="logo">
+                    IC "Repair Design Project" 
+                </div>
+                <nav>
+                    <ul class="header-navigation">
+                        <li class="header-navigation__item active"><a class="header-navigation__link" href="#">Home</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#project">Projects</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#measurement">Measurement</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#team">Team</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#reviews">Reviews</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#contacts">Contacts</a></li>
+                    </ul> 
+                </nav>
+                <div class="contacts">
+                    <div class="contacts-phone">
+                        <a href="tel:+79287683239" class="header-navigation__link">+7 (928) 768-32-39</a>
+                    </div>
+                    <button class="requestCall">Request a call</button>
+                </div>
+            </div>
+        </footer>
     </div>    
 </body>
 </html> 

@@ -49,7 +49,8 @@ body {
 }
 
 .header, 
-.projects {
+.projects,
+.footer {
     background-color: #131313;
 }
 
@@ -88,7 +89,9 @@ button,
 .projects-list,
 .repair-price,
 .circle div,
-.reviews-amount .paragraph{
+.reviews-amount .paragraph,
+.feedback-form .paragraph,
+.address .paragraph{
     font-family: 'Yeseva One','Times New Roman', Times, serif;
 }
 
@@ -133,7 +136,8 @@ a {
 }
 
 header,
-.projects {
+.projects,
+.footer {
     color: white;
 }
 
@@ -145,6 +149,7 @@ input {
     border: none;
     font-size: 0.7em;
     line-height: 1.64;
+    font-family: inherit;
 }
 
 .checkbox {
@@ -924,6 +929,9 @@ h1 ~ .paragraph {
 .measurement-form {
     flex-direction: column;
     background-color: #131313;
+}
+
+.measurement-form {
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     width: 506px;
     margin-bottom: 1.9em;
@@ -944,15 +952,19 @@ h1 ~ .paragraph {
     color: #E3B873;
     padding-top: 1em;
 }
+.measurement-form .paragraph,
+.feedback-form .paragraph {
+    text-align: center;
+    color: #FFFFFF;
+}
 
 .measurement-form .paragraph {
     font-size: 0.9em;
-    text-align: center;
-    color: #FFFFFF;
     margin-bottom: 2.2em;
 }
 
-.measurement-form .label {
+.measurement-form .label,
+.feedback-form .label{
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1274,4 +1286,110 @@ h1 ~ .paragraph {
 
 .reviews-background div:last-of-type {
     transform: scale(-1, 1);
+}
+
+/* Feedback  */
+
+.feedback-form {
+    width: 883px;
+    background: #181818;
+    flex-direction: column;
+    padding-top: 34px;
+    padding-right: 181.5px;
+    padding-left: 181.5px;
+    padding-bottom: 34px;
+}
+
+.feedback-form_contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-form .checkbox {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.feedback-form .form-submit .submit  {
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+}
+
+.feedback-form .input {
+    background-color: inherit;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.feedback-form .paragraph {
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-bottom: 46px;
+}
+
+.feedback-form_username .input,
+.feedback-form_userphone .input {
+    width: 231px;
+}
+
+.feedback-form_userquestion .input {
+    width: 100%;
+}
+
+.feedback-form_userquestion {
+    margin-top: 49px;
+    margin-bottom: 46px;
+}
+
+.address-background-2 {
+    background: url(../images/bkgmap.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 954px;
+    z-index: 2;
+}
+
+.address-background-1 {
+    height: 954px;
+    min-width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: #181818
+}
+
+.address-overlay {
+    height: 954px;
+    min-width: 100%;
+    position: absolute;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+}
+
+.address .container {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    padding-top: 274px;
+    padding-bottom: 53px;
+}
+
+.networks {
+    height: 28px;
+    margin-top: 26px;
+    margin-bottom: 43px;
+}
+
+.networks img:first-child {
+    margin-right: 12px;
+}
+
+.address .paragraph {
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+footer .container.navigation {
+    height: 133px;
 }
