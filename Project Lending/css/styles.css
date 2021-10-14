@@ -160,6 +160,7 @@ input {
 .label{
     font-size: 0.65em;
     line-height: 1.6;
+    cursor: pointer;
 }
 
 .label-checkbox {
@@ -383,7 +384,6 @@ h1 ~ .paragraph {
 
 .projects .container {
     display: flex;
-    padding-left: 1.6em;
     padding-top: 5.35em;
     padding-bottom: 20.8em;
 }
@@ -405,7 +405,7 @@ h1 ~ .paragraph {
         padding-top: 1.8em;
         padding-left: 0.9em;
         padding-right: 0.9em;
-        padding-bottom: 44.2em;
+        padding-bottom: 910px
     }
 }
 
@@ -435,7 +435,8 @@ h1 ~ .paragraph {
 }
 
 .projects-chairs {
-    margin-top: 2.25em;
+    margin-top: 50px;
+    height: 482px;
 }
 
 .projects-chairs img {
@@ -474,6 +475,13 @@ h1 ~ .paragraph {
     margin-top: 3em;
     margin-bottom: 7em;
 }
+
+@media screen and (max-width:767px) {
+    .projects-room {
+        margin-top: 72px;
+    }
+}
+
 
 .sliderNavigation {
     justify-content: space-between;
@@ -524,7 +532,9 @@ h1 ~ .paragraph {
 
 .carousel {
     display: flex;
-    margin-top: 4em;
+    margin-top: 75px;
+    height: 13px;
+    align-items: center;
 }
 
 .carousel div {
@@ -542,19 +552,25 @@ h1 ~ .paragraph {
 /* Блок Online Control */
 
 .control .container {
-    margin-top: -17em;
+    margin-top: -333px;
 }
 
 @media screen and (max-width:767px) {
     .control .container{
-        margin-top: -39em;
+        margin-top: -850px;
     }
 }
 
 .control-camera {
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 13px;
+}
+
+@media screen and (max-width:767px) {
+    .control-camera {
+        margin-top: 20px;
+    }
 }
 
 .camera-icon {
@@ -595,7 +611,7 @@ h1 ~ .paragraph {
     width: 817px;
     height: 434px;
     margin: auto;
-    margin-top: 1.5em;
+    margin-top: 27px;
     margin-bottom: 3.1em;
     filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.15));
 }
@@ -606,7 +622,7 @@ h1 ~ .paragraph {
         width: 340px;
         height: 207px;
         margin-bottom: 1.4em;
-        margin-top: 2em;
+        margin-top: 35px;
         box-shadow: 0px 20px 30px rgba(24, 24, 24, 0.1)
         }
 }   
@@ -614,6 +630,7 @@ h1 ~ .paragraph {
 .control-video img {
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .control-video img:first-child {
@@ -651,7 +668,7 @@ h1 ~ .paragraph {
     text-align: center;
     margin-top: 1.9em;
     margin-bottom: 5.2em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 2.06;
 }
 
@@ -660,8 +677,8 @@ h1 ~ .paragraph {
         font-size: 0.55em;
         line-height: 169.8%;
         color: #FFFFFF;
-        margin-top: 2em;
-        margin-bottom: 4em;
+        margin-top: 21px;
+        margin-bottom: 75px;
     }
 }
 
@@ -732,7 +749,7 @@ h1 ~ .paragraph {
         color:#FFFFFF;
         margin-left: 0;
         margin-top: 1.9em;
-        margin-bottom: 4em;
+        margin-bottom: 60px;
     }
 
     .form-submit{
@@ -741,7 +758,7 @@ h1 ~ .paragraph {
 
     .control-form_userphone {
         margin: 0;
-        margin-top: 3.1em;
+        margin-top: 55px;
     }
 }
 
@@ -749,7 +766,7 @@ h1 ~ .paragraph {
 
 .repair .container {
     padding: 0;
-    padding-top: 7.4em;
+    margin-top: 145px;
 }
 
 
@@ -761,13 +778,14 @@ h1 ~ .paragraph {
 
 @media screen and (max-width:767px) {
     .repair-icon {
-        margin-bottom: 2em;
-        margin-top: 0.85em;
+        margin-bottom: 45px;
+        margin-top: 15px;
     }
 
     .repair .container {
         padding: 0 18px;
         padding-top: 2.9em;
+        margin-top: 0;
     }
 }
 
@@ -786,12 +804,16 @@ h1 ~ .paragraph {
     flex-direction: column;
 }
 
+.repair-picture {
+    height:421px
+}
+
 .repair-text {
     background-color: white;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-    margin-left: 1.5em;
-    padding-left: 1.5em;
-    margin-top: -6.75em;
+    margin-left: 31px;
+    padding-left: 31px;
+    margin-top: -127px;
     width: 330px;
     height: 286px;
 }
@@ -799,9 +821,14 @@ h1 ~ .paragraph {
 @media screen and (max-width:767px) {
     .repair-text {
         margin-left: 0;
-        width: 72vw;
-        height: 36.1vh;
-        margin-top: -7.1em;
+        width: 270px;
+        height: 241px;
+        margin-top: -142px;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .repair-picture {
+        height: 365px;
     }
 }
 
@@ -842,22 +869,26 @@ h1 ~ .paragraph {
     color: #FFFFFF;
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-    margin-left: 1.7em;
+    margin-left: 1.75em;
     padding-top: 0.95em;
     padding-bottom: 0.95em;
-    margin-top: -1.5em;
+    margin-top: -26px;
 }
 
 @media screen and (max-width:767px) {
     .repair-price {
         padding-top: 0.77em;
         padding-bottom: 0.77em;
-        margin-top: -1.35em;
-        margin-bottom: 4em;
+        margin-top: -20px;
+        margin-bottom: 59px;
         width: 190px;
         height: 40px;
         margin-left: 0;
     }
+
+    .designer-repair .repair-price{
+        margin-bottom: 55px
+    } 
 }
 
 .redecorating .repair-price {
@@ -908,8 +939,8 @@ h1 ~ .paragraph {
     display: flex;
     justify-content: space-between;
     margin-right: 3.4em;
-    padding-top: 6.2em;
-    padding-bottom: 235px;
+    margin-top: 6.2em;
+    padding-bottom: 230px;
     max-width: 1643px;
 }
 
@@ -1084,9 +1115,6 @@ h1 ~ .paragraph {
     }
 
     .realization .container {
-        display: block;
-        position:static;
-        max-width: none;
         padding: 0 18px;
         margin: 0 auto;
     }
@@ -1095,22 +1123,20 @@ h1 ~ .paragraph {
         display: block;
     }
 
-    .subtitle {
+    .realization .subtitle {
         color: #E3B873;
-        margin-bottom: 27px;
+        margin-bottom: 30px;
     }
 
     .container-mobile-picture {
         height: 242px;
-        position: absolute;
     }
 
     .container-mobile-scrolling {
         display: flex;
         justify-content: space-between;
-        position: absolute;
         width: 340px;
-        margin-top: 88px;
+        margin-top: -154px;
     }
 }
 
@@ -1294,7 +1320,7 @@ h1 ~ .paragraph {
 }
 
 .feedback-form {
-    width: 883px;
+    max-width: 883px;
     background: #181818;
     flex-direction: column;
     padding-top: 34px;
@@ -1307,15 +1333,42 @@ h1 ~ .paragraph {
     top: -240px;
 }
 
+@media screen and (max-width:767px) {
+    .feedback {
+        height: auto;
+    }
+
+    .feedback-form {
+        padding-top: 173px;
+        padding-left: 0;
+        padding-bottom: 46px;
+        padding-right: 0;
+        position: static;
+    }
+}
+
 .feedback-form_contacts {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:767px) {
+    .feedback-form_contacts {
+        flex-direction: column;
+    }
 }
 
 .feedback-form .checkbox {
     color: white;
     text-align: center;
     margin-bottom: 45px;
+}
+
+@media screen and (max-width:767px) {
+    .feedback-form .checkbox {
+        margin-bottom: 65px;
+        text-align: left;
+    }
 }
 
 .form-submit {
@@ -1339,6 +1392,12 @@ h1 ~ .paragraph {
     margin-bottom: 40px;
 }
 
+@media screen and (max-width:767px) {
+    .feedback-form .paragraph {
+        margin-bottom: 50px;
+    }
+}
+
 .feedback-form_username .input,
 .feedback-form_userphone .input {
     width: 231px;
@@ -1348,6 +1407,18 @@ h1 ~ .paragraph {
     width: 100%;
 }
 
+@media screen and (max-width:767px) {
+    .feedback-form_username .input,
+    .feedback-form_userphone .input {
+        width: 100%;
+    }
+
+    .feedback-form_userphone {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
 .feedback-form_userquestion {
     margin-top: 45px;
     margin-bottom: 46px;
@@ -1355,6 +1426,21 @@ h1 ~ .paragraph {
 
 .address {
     height: 954px;
+}
+
+@media screen and (max-width:767px) {
+    .address {
+        height: auto;
+        background-color: #131313;
+        padding: 0 18px;
+        margin-top: -40px;
+        padding-bottom: 45px;
+    }
+
+    .feedback-form_userquestion {
+        margin-top: 0;
+        margin-bottom: 21.5px;
+    }
 }
 
 .address-background-2 {
@@ -1387,7 +1473,7 @@ h1 ~ .paragraph {
     position: relative;
     z-index: 4;
     padding: 0;
-    width: 925px;
+    max-width: 925px;
 }
 
 .networks {
@@ -1401,7 +1487,7 @@ h1 ~ .paragraph {
     margin-right: 12px;
 }
 
-.address .paragraph {
+.address .container .paragraph {
     text-transform: uppercase;
     color: #E3B873;
     text-align: center;
@@ -1411,12 +1497,30 @@ footer .container.navigation {
     height: 133px;
 }
 
+.container.address-mobile {
+    display: none;
+}
+
 @media screen and (max-width:767px) {
-    .address {
+    .address .container,
+    .address-background-1,
+    .address-background-2,
+    .address-overlay,
+    .footer {
         display: none;
     }
 
-    .footer {
-        display: none;
+    .container.address-mobile {
+        display: block;
+    }
+
+    .address .container .paragraph {
+        font-size: 0.9em;
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+
+    .networks-mobile {
+        text-align: center;
     }
 }
