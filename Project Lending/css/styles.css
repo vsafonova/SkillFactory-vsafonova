@@ -1523,4 +1523,8 @@ footer .container.navigation {
     .networks-mobile {
         text-align: center;
     }
+
+    .networks-mobile img:first-child {
+        margin-right: 20px;
+    }
 }
