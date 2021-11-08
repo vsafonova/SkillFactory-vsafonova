@@ -311,6 +311,8 @@ input {
     .header-block-background {
         background: url(..//images/backgroundmobile.png) no-repeat;
         height: 476px;
+        background-position: center;
+        background-size: cover;
     }
 
     .header-block {
@@ -469,28 +471,25 @@ h1 ~ .paragraph {
         font-size: 1.1em;
         line-height: 138.6%;
     }
-}
-
-.projects-room {
-    margin-top: 3em;
-    margin-bottom: 7em;
-}
-
-@media screen and (max-width:767px) {
+    
     .projects-room {
         margin-top: 72px;
+        background: url(../images/roomMobile.png) no-repeat;
+        height: 241px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .sliderNavigation {
+        justify-content: space-between;
+        position: relative;
+        top: -23%;
+        margin-right: 0.65em;
+        margin-left: 0.65em;
+        display: flex;
     }
 }
-
-
-.sliderNavigation {
-    justify-content: space-between;
-    margin-top: -7.5em;
-    margin-right: 0.65em;
-    margin-left: 0.65em;
-    display: flex;
-}
-
 .feature_title {
     margin-top: 0;
     margin-bottom: 0;
@@ -619,8 +618,9 @@ h1 ~ .paragraph {
 @media screen and (max-width:767px) {
     .control-video{
         background-image: url("../images/controlmobile.png");
-        width: 340px;
+        background-size: cover;
         height: 207px;
+        width: 100%;
         margin-bottom: 1.4em;
         margin-top: 35px;
         box-shadow: 0px 20px 30px rgba(24, 24, 24, 0.1)
@@ -704,7 +704,7 @@ h1 ~ .paragraph {
     .control-form {
         margin-left: 0;
         flex-direction: column;
-        width: 340px;
+        width: 100%;
     }
 }
 
@@ -829,6 +829,10 @@ h1 ~ .paragraph {
 
     .repair-picture {
         height: 365px;
+    }
+
+    .repair-picture img {
+        width: 100%;
     }
 }
 
@@ -1121,6 +1125,7 @@ h1 ~ .paragraph {
 
     .container-mobile {
         display: block;
+        width: 100%;
     }
 
     .realization .subtitle {
@@ -1132,10 +1137,13 @@ h1 ~ .paragraph {
         height: 242px;
     }
 
+    .container-mobile-picture img {
+        width: 100%;
+    }
+
     .container-mobile-scrolling {
         display: flex;
         justify-content: space-between;
-        width: 340px;
         margin-top: -154px;
     }
 }
@@ -1329,7 +1337,8 @@ h1 ~ .paragraph {
     padding-bottom: 34px;
     position: relative;
     z-index: 4;
-    left: 20.05%;
+    left: 50%;
+    transform: translateX(-50%);
     top: -240px;
 }
 
@@ -1344,6 +1353,7 @@ h1 ~ .paragraph {
         padding-bottom: 46px;
         padding-right: 0;
         position: static;
+        transform: none;
     }
 }
 
@@ -1526,5 +1536,9 @@ footer .container.navigation {
 
     .networks-mobile img:first-child {
         margin-right: 20px;
+    }
+
+    .address-mobile_map {
+        width: 100%;
     }
 }
